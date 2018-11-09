@@ -1,0 +1,47 @@
+// Colors
+$red: #FF5252;
+$red-hover: #F44336;
+
+footer {
+    background-color: #424242;
+    min-height: 400px;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows:  70% 20% 10%;
+    justify-content: space-evenly;
+}
+
+footer .about, footer .contact, footer .links { display: inline-block; text-align: left; }
+footer .about p { padding-left: 120px}
+
+footer .contact { width: 100%}
+
+footer h3 { margin-bottom: 0.2em }
+footer p { margin-top: 0; margin-right: 3.5em }
+footer form { width: 100%; margin: 0; padding: 0}
+
+footer form input {
+    width: 100%;
+}
+
+footer form input, footer form textarea {
+    border-radius: 5px 5px 5px 5px;
+    margin-bottom: 0.8em;
+    padding: 0.3em;
+    border: 0 solid;
+    background: #c6bdb4;
+    width: 100%;
+    color: #000000;
+    letter-spacing: 0.08em;
+}
+
+footer form input:focus, footer form textarea:focus{
+    outline: 0;
+}
+
+footer form .send {width: 150px; height: 40px; background: $red; box-shadow: 1px 1px 1px #222222;}
+
+footer form .send:hover { background: $red-hover; }
+
+footer form .send:active { box-shadow: none; }

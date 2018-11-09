@@ -1,0 +1,48 @@
+// Colors
+$red: #FF5252;
+$red-hover: #F44336;
+
+.assignment {
+    margin: 0 0 30px 0;
+    width: 70%;
+}
+
+.resume-header {
+    display: inline-flex;
+    align-items: baseline;
+    width: 100%;
+    flex-direction: row;
+}
+
+h3 {
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.divider {
+    font-weight: 400;
+    padding: 0 10px 0 10px;
+    font-size: 25px;
+    color: $red;
+}
+
+h4 {
+    font-weight: 400;
+    font-size: 20px;
+}
+
+p {
+    margin: 0px;
+    color: #999;
+}
+
+.location {
+    text-align: right;
+    flex: 1;
+    font-style: italic;
+}
+
+span {
+    display: block;
+    padding: 10px 0;
+}
