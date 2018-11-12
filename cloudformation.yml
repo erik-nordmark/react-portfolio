@@ -2,7 +2,7 @@ AWSTemplateFormatVersion: 2010-09-09
 Parameters: 
   ProjectSource: 
     Type: String
-    Default: "https://github.com/hxmn/portfolio-repo.git"
+    Default: "https://github.com/hxmn/react-portfolio.git"
     Description: "Source control URL (e.g. Github)"
   GithubOwner:
     Type: String
