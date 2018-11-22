@@ -15,7 +15,7 @@ class App extends Component {
         <Splash quote="Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away." author="Antoine de Saint-Exupéry" />
         <ProjectGrid />
         <Resume />
-        {/* <Footer text="this is a footer" /> */}
+        <Footer text="this is a footer" />
       </div>
     );
   }

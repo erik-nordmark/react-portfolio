@@ -12,26 +12,26 @@ $red-hover: #F44336;
     align-items: baseline;
     width: 100%;
     flex-direction: row;
+
+    h3 {
+        font-weight: 500;
+        font-size: 24px;
+    }
+    
+    .divider {
+        font-weight: 400;
+        padding: 0 10px 0 10px;
+        font-size: 25px;
+        color: $red;
+    }
 }
 
-h3 {
-    font-weight: 600;
-    font-size: 24px;
-}
-
-.divider {
-    font-weight: 400;
-    padding: 0 10px 0 10px;
-    font-size: 25px;
-    color: $red;
-}
-
-h4 {
+.assignment h4 {
     font-weight: 400;
     font-size: 20px;
 }
 
-p {
+.assignment p {
     margin: 0px;
     color: #999;
 }
@@ -42,7 +42,7 @@ p {
     font-style: italic;
 }
 
-span {
+.assignment span {
     display: block;
     padding: 10px 0;
 }

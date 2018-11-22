@@ -1,0 +1,109 @@
+.project-details {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    z-index: 10000;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    background-size: cover;
+    object-fit: contain;
+    background-position: center center;
+    display: grid;
+    grid-template-columns: 15% 35% 35% 15%;
+    grid-template-rows:  5% 5% 40% 40%;
+
+    .close-project-details {
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: #222222;
+        font-size: 80px;
+        cursor: pointer;
+        margin: 20px;
+        transition: opacity 0.1s ease-in-out;
+    }
+
+    img {
+        width: 500px;
+        height: auto;
+        object-fit: contain;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2; 
+        grid-row-end: 4;
+    }
+
+    .text-wrapper {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 3; 
+        grid-row-end: 4;
+
+        h2 {
+            text-align: left;
+            margin: 0;
+        }
+
+        h2:before {
+            border: 0;
+        }
+
+        p {
+            line-height: 180%;
+        }
+
+        .divider {
+            width: 400px;
+            height: 20px;
+            bottom: 0px;
+            left: 0;
+            border-bottom: 1px solid #777777;
+            margin: 20px 0 20px 0;
+        }
+
+        button {
+            width: 300px;
+            height: 60px;
+            border-radius: 60px;
+            background-color: #222222;
+            margin-top: 20px;
+            color: #ffffff;
+            font-size: 22px;
+        }
+    }
+
+    .fade-left {
+        animation: slide-in-left 2s ease;
+    }
+
+    .fade-right {
+        animation: slide-in-right 2s ease;
+    }
+
+    @keyframes slide-in-left {
+        0% {
+            opacity: 0;
+            transform: translateX(-100%);
+         }
+
+         100% {
+            opacity: 1;
+            transform: translateX(0);
+         }
+    }
+
+    @keyframes slide-in-right {
+        0% {
+            opacity: 0;
+            transform: translateX(200%);
+         }
+
+         100% {
+            opacity: 1;
+            transform: translateX(0);
+         }
+    }
+}
