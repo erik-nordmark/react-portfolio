@@ -17,6 +17,14 @@ export class ProjectDetails extends React.Component<any, ProjectDetailsState> {
         super(props, state);
     }
 
+    componentDidUpdate() {
+        if (this.props.open) {
+            document.body.style.overflow = "hidden"
+        } else {
+            document.body.style.overflow = "auto"
+        }
+    }
+
     render() {
         return (
             <div className="project-details" style={{opacity: this.props.open ? 1 : 0, visibility: this.props.open ? 'visible' : 'hidden'}}>
