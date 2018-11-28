@@ -1,7 +1,7 @@
 import * as React from "react";
 import './Resume.scss';
 
-import { Assignment } from "../assignment/Assignment"
+import { Assignment } from "../Assignment/Assignment"
 
 export interface ResumeProps {
 }

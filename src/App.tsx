@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import './App.scss';
 
-import { Footer } from "./components/footer/Footer";
-import { Header } from "./components/header/Header";
-import { ProjectGrid } from "./components/project-grid/Project-grid";
-import { Resume } from "./components/resume/Resume";
-import { Splash } from "./components/splash/Splash";
+import { Footer } from "./components/Footer/Footer";
+import { Header } from "./components/Header/Header";
+import { ProjectGrid } from "./components/ProjectGrid/ProjectGrid";
+import { Resume } from "./components/Resume/Resume";
+import { Splash } from "./components/Splash/Splash";
 
 class App extends Component {
   render() {

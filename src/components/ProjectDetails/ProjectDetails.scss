@@ -1,0 +1,212 @@
+.project-details {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    z-index: 10000;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    background-size: cover;
+    object-fit: contain;
+    background-position: center center;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows:  100%;
+
+    .close-project-details {
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: #222222;
+        font-size: 80px;
+        cursor: pointer;
+        margin: 20px;
+        transition: opacity 0.1s ease-in-out;
+    }
+
+    .left-side {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;    
+    }
+
+    .right-side {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    img {
+        max-width: 500px;
+        height: auto;
+        object-fit: contain;
+        grid-row-start: 2; 
+        grid-row-end: 4;
+    }
+
+    .text-wrapper {
+        margin: 0 20% 0 50px ;
+
+        h2 {
+            text-align: left;
+            margin: 0;
+            font-size: 50px;
+        }
+
+        h2:before {
+            border: 0;
+        }
+
+        p {
+            line-height: 180%;
+        }
+
+        .divider {
+            width: 400px;
+            height: 20px;
+            bottom: 0px;
+            left: 0;
+            border-bottom: 1px solid #777777;
+            margin: 20px 0 20px 0;
+        }
+
+        button {
+            width: 300px;
+            height: 60px;
+            border-radius: 60px;
+            background-color: #222222;
+            margin-top: 20px;
+            color: #ffffff;
+            font-size: 22px;
+        }
+    }
+
+    .fade-up {
+        animation: slide-in-up 2s ease;
+    }
+
+    .fade-down {
+        animation: slide-in-down 2s ease;
+    }
+
+    .fade-left {
+        animation: slide-in-left 2s ease;
+    }
+
+    .fade-right {
+        animation: slide-in-right 2s ease;
+    }
+
+    @keyframes slide-in-left {
+        0% {
+            opacity: 0;
+            transform: translateX(-100%);
+         }
+
+         100% {
+            opacity: 1;
+            transform: translateX(0);
+         }
+    }
+
+    @keyframes slide-in-right {
+        0% {
+            opacity: 0;
+            transform: translateX(200%);
+         }
+
+         100% {
+            opacity: 1;
+            transform: translateX(0);
+         }
+    }
+
+    @keyframes slide-in-up {
+        0% {
+            opacity: 0;
+            transform: translateY(100%);
+         }
+
+         100% {
+            opacity: 1;
+            transform: translateY(0);
+         }
+    }
+
+    @keyframes slide-in-down {
+        0% {
+            opacity: 0;
+            transform: translateY(-100%);
+         }
+
+         100% {
+            opacity: 1;
+            transform: translateY(0);
+         }
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .project-details {
+        grid-template-columns: 1fr;
+        grid-template-rows: 500px auto;
+
+        .left-side {
+            justify-content: center; 
+        }
+    
+        .right-side {
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        img {
+            max-width: auto;
+            max-height: 90%;
+            object-fit: contain;
+            grid-row-start: 2; 
+            grid-row-end: 4;
+        }
+
+        .text-wrapper {
+            margin: 50px;
+
+            h2 {
+                font-size: 40px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .project-details {
+    
+        .text-wrapper {
+            margin: 30px ;
+            display: flex;
+            flex-direction: column;
+    
+            .divider {
+                width: 100%;
+                height: 20px;
+                bottom: 0px;
+                left: 0;
+                border-bottom: 1px solid #777777;
+                margin: 20px 0 20px 0;
+            }
+    
+            button {
+                width: 300px;
+                height: 60px;
+                border-radius: 60px;
+                background-color: #222222;
+                margin-top: 20px;
+                color: #ffffff;
+                font-size: 22px;
+                align-self: center;
+            }
+        }
+    }
+}

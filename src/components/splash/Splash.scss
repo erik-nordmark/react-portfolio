@@ -4,14 +4,33 @@ $red-hover: #F44336;
 
 .splash {
     width: 100%;
-    height: 600px;
+    height: 400px;
     background-color: dodgerblue;
     background-repeat: no-repeat, no-repeat;
     background-position: center, center;
-    margin-bottom: 70px;
+    margin-bottom: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
+    //background-image: url(../../assets/images/macbook_PNG48.png);
+    background-position: center bottom;
+    background-image:
+        linear-gradient(
+        to top left, 
+        dodgerblue,
+        rgb(79, 165, 252) 50%
+        );
+        background: #1e5799;
+        background: -moz-linear-gradient(-45deg, #1e5799 0%, #2989d8 51%, #207cca 52%, #7db9e8 100%);
+        background: -webkit-linear-gradient(-45deg, #1e5799 0%,#2989d8 51%,#207cca 52%,#7db9e8 100%);
+        background: linear-gradient(135deg, #1e5799 0%,#2989d8 50%,#207cca 50%,#7db9e8 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='dodgeblue', endColorstr='#7db9e8',GradientType=1 );
+
+    img {
+        object-fit: contain;
+        height: 300px;
+        margin-bottom: -250px;
+     }
 
     h1 {
         
@@ -37,6 +56,11 @@ $red-hover: #F44336;
 
     i {
         align-self: flex-end;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .splash {
     }
 }
 
