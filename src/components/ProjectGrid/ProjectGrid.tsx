@@ -38,71 +38,71 @@ export interface IProject {
     image: any,
     text: string,
     type: string,
-    duration: string;
+    year: number;
 }
 
 const projectStena: IProject = {
     name: 'Stena Recycling',
     image: stenaDetails, 
     text: 'Stena is one of the largest family-owned corporate groups in Sweden and operates worldwide. I worked for Stena Recycling with their customer portal. The customer portal provides the user with updated information and statistics on all of its waste management. My task was, above all, to improve the new user on-boarding experience, by replacing existing applications with new ones. These new web applications were written in Angular 2+ along with TypeScript, and included welcome email, registration and login, as well as associated micro services to communicate with other parts of the system. I was also responsible for getting these new micro services tested, since this was something that was missing from the beginning.',
-    type: 'Web developer', 
-    duration: '2018 - 2018'
+    type: 'Fullstack Web developer', 
+    year: 2018
 };
 
 const projectVolvo: IProject = {
     name: 'Volvo Trucks',
     image: volvoDetails, 
     text: 'At Volvo Trucks they are building the next generation of trucks. I was part of the Android development team. They are working to build the new infotainment system that is planned to be released to the public in 2020. The software foundation is mainly android, but is tightly connected with the truck specific hardware and also requires knowledge working with network configuration. I did primarily work with an application that handles streams from auxiliary cameras on the network and he has taken a big part in defining how to work with dependency injection together with Dagger.',
-    type: 'Web developer', 
-    duration: '2018 - 2018'
+    type: 'Android developer', 
+    year: 2017
 };
 
 const projectSkim: IProject = {
-    name: 'SKIM Analytics',
+    name: 'SKIM Analytics - Virtual Shelf',
     image: skimDetails, 
     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    type: 'Web developer', 
-    duration: '2018 - 2018'
+    type: 'Fullstack Web developer', 
+    year: 2016
 };
 
 const projectMilestone: IProject = {
     name: 'Milestone',
     image: milestoneDetails, 
     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    type: 'Web developer', 
-    duration: '2018 - 2018'
+    type: 'Design / Android developer', 
+    year: 2015
 };
 
 const projectMouseophonic: IProject = {
     name: 'Mouseophonic',
     image: mouseophonicDetails, 
     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    type: 'Web developer', 
-    duration: '2018 - 2018'
+    type: 'Design / Android developer', 
+    year: 2014
 };
 
 const projectOmnipar: IProject = {
-    name: 'Omnipar',
+    name: 'SKIM Analytics - Omnipar',
     image: omniparDetails, 
     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    type: 'Web developer', 
-    duration: '2018 - 2018'
+    type: 'Design - Logo', 
+    year: 2017
 };
 
 const projectClaimscheck: IProject = {
-    name: 'Claims Check',
+    name: 'SKIM Analytics - Claims Check',
     image: claimscheckDetails, 
     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    type: 'Web developer', 
-    duration: '2018 - 2018'
+    type: 'Design - Logo', 
+    year: 2017
 };
 
 const projectErikNordmark: IProject = {
     name: 'eriknordmark.com',
     image: erikNordmarkkDetails, 
     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    type: 'Web developer', 
-    duration: '2018 - 2018'
+    type: 'Design / Web developer', 
+    year: 2018
 };
 
 export class ProjectGrid extends React.Component<ProjectGridProps, ProjectGridState> {

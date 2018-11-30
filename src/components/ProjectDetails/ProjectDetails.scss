@@ -1,3 +1,5 @@
+$red: #FF5252;
+
 .project-details {
     width: 100vw;
     height: 100vh;
@@ -61,6 +63,42 @@
 
         p {
             line-height: 180%;
+        }
+
+        .specs::before {
+            content: "/";
+            font-size: 55px;
+            color: $red;
+            grid-row-start: 1;
+            grid-row-end: -1;
+        }
+
+        .specs {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            grid-template-rows: 1fr 1fr;
+
+            h3 {
+                margin: 0;
+                font-size: 20px;
+                margin-left: 10px;
+                margin-right: 30px;
+                color: $red;
+                text-transform: uppercase;
+            }
+
+            .year {
+                color: #000;
+                grid-column-start: 2;
+                align-self: flex-end
+            }
+
+            .type {
+                grid-column-start: 2;
+                color: #000;
+                font-weight: 300;
+
+            }
         }
 
         .divider {

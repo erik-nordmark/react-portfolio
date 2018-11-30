@@ -56,6 +56,10 @@ export class ProjectDetails extends React.Component<ProjectDetailsProps, Project
                 <div className="right-side">
                     <div className={"text-wrapper " + (this.props.open ? this.props.rightAnimation : '')}>
                         <h2>{this.props.project.name}</h2>
+                        <div className="specs">
+                            <h3 className="year">{this.props.project.year}</h3>
+                            <h3 className="type">{this.props.project.type}</h3>
+                        </div>
                         <p>{this.props.project.text}</p>
                         <div className="divider"></div>
                         <button>BUTTON</button>

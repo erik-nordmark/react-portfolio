@@ -12,7 +12,8 @@ export class Footer extends React.Component<FooterProps, {}> {
         return ( 
         <footer>
            <div className="about">
-                <h3><Ionicons.IoIosPaperPlane />about</h3>
+                <h3>/ about</h3>
+                {/* <h3><Ionicons.IoIosPaperPlane />about</h3> */}
                 <div className="me"></div>
                 <p>Here I am - something as unusual as a developer with a sense of humor and an eye for design.
                 My name is Erik Nordmark and I am <script>document.write(new Date().getFullYear() - new Date(1987))</script> years old. I am living in Gothenburg where I am working as a software developer consultant for Devies.
@@ -20,7 +21,8 @@ export class Footer extends React.Component<FooterProps, {}> {
                 </p>
             </div>
             <div className="contact">
-                <h3><Ionicons.IoIosContact />contact</h3>
+                <h3>/ contact</h3>
+                {/* <h3><Ionicons.IoIosContact />contact</h3> */}
                 <form>
                     Email:
                     <input type="text" name="email" placeholder="name@mail.com" />
