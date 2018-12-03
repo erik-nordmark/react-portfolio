@@ -3,3 +3,10 @@
     align-items: center;
     flex-direction: column;
 }
+
+@media only screen 
+and (max-device-width : 812px) {
+    .resume {
+        font-size: 120%;
+    }
+}
