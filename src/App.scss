@@ -30,6 +30,13 @@ h2:before {
     border-bottom: 1px solid #777777;
 }
 
+@media only screen 
+and (max-device-width : 812px) {
+    h2 {
+        font-size: 60px;
+    }
+}
+
 .App {
     min-height: 100vh;
     width: 100vw;
