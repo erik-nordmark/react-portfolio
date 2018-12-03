@@ -12,7 +12,7 @@ export class Resume extends React.Component<ResumeProps, {}> {
             <section className="resume">
                 <h2>Resumé</h2>
                 <Assignment
-                    company="Stena"
+                    company="Stena Recycling"
                     start="Q2 2018"
                     end="Q4 2018"
                     position="Web developer"

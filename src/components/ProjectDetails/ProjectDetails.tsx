@@ -62,7 +62,7 @@ export class ProjectDetails extends React.Component<ProjectDetailsProps, Project
                         </div>
                         <p>{this.props.project.text}</p>
                         <div className="divider"></div>
-                        <button>BUTTON</button>
+                        <button>VISIT</button>
                     </div>         
                 </div>  
             </div>

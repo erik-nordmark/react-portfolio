@@ -5,12 +5,12 @@ $red-hover: #F44336;
 footer {
     background-color: #424242;
     min-height: 400px;
-    width: 100vw;
+    flex: 1;
     display: grid;
     grid-template-columns: 15% 35% 35% 15%;
     grid-template-rows:  65% 15% 10% 10%;
     justify-content: space-evenly;
-    margin-top: 50px;
+    margin-top: 100px;
     padding-top: 20px;
     color: #ffffff;
     font-size: 15px;
@@ -50,14 +50,14 @@ footer .contact {
 
 footer .about, footer .contact, footer .links { text-align: left; }
 footer .about p { 
-    // color: #ffffff; 
     grid-column-start: 2; 
     grid-column-end: 3; 
     grid-row-start: 2; 
     padding: 0 0 0 20px;
     margin: 0;
-    font-size: 17px;
+    font-size: 16px;
     letter-spacing: 0.01em;
+    line-height: 1.5;
 
     a {
         color: #ffffff;
@@ -95,7 +95,7 @@ footer form input:focus, footer form textarea:focus{
     outline: 0;
 }
 
-footer form .send {width: 150px; height: 40px; background: $red; box-shadow: 1px 1px 1px #222222; font-weight: 600; }
+footer form .send {width: 150px; height: 40px; background: $red; box-shadow: 1px 1px 1px #222222; font-weight: 600; color: #ffffff }
 
 footer form .send:hover { background: $red-hover; }
 
@@ -138,7 +138,7 @@ footer form .send:active { box-shadow: none; }
 
 @media screen and (max-width: 812px) {
     footer {
-        grid-template-columns: 100vw;
+        grid-template-columns: 100%;
         grid-template-rows:  auto auto 50px 50px;
         justify-content: space-between;
         align-content: center;
@@ -153,13 +153,12 @@ footer form .send:active { box-shadow: none; }
         margin: 0;
         display: flex;
         flex-direction: column;
-        width: 100vw;
         align-items: center;
         padding: 10px;
+        flex: 1;
     }
 
     footer .about p {
-        width: 100vw;
         padding: 0;
         margin: 0;
     }
@@ -168,35 +167,38 @@ footer form .send:active { box-shadow: none; }
         grid-column-start: 1;
         grid-row-start: 2;
         grid-row-end: 2;
-        margin: 10px; 
     }
+
+    footer form .send { width: 100% }
+
 }
 
 
 @media only screen 
 and (max-device-width : 812px) {
     footer {
-        grid-template-columns: 100vw;
+        grid-template-columns: 100%;
         grid-template-rows:  auto auto 50px 50px;
-        justify-content: space-evenly;
+        align-self: center;
+        padding: 20px;
     }
 
     footer h3 {  grid-column-start: 1;  grid-column-end: 3; align-self: center }
 
     footer .about {
         grid-column-start: 1;
+        grid-column-end: 1;
         grid-row-start: 1;
         grid-row-end: 2;
         margin: 0;
         display: flex;
         flex-direction: column;
-        width: 100vw;
         align-items: center;
         padding: 10px;
+        flex: 1;
     }
 
     footer .about p {
-        width: 100vw;
         padding: 0;
         margin: 0;
     }
@@ -206,6 +208,8 @@ and (max-device-width : 812px) {
         grid-column-end: 1;
         grid-row-start: 2;
         grid-row-end: 2;
-        margin: 10px; 
     }
+
+    footer form .send { width: 100%; }
+
 }

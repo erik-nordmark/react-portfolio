@@ -57,6 +57,22 @@ const projectVolvo: IProject = {
     year: 2017
 };
 
+const projectOmnipar: IProject = {
+    name: 'SKIM Analytics - Omnipar',
+    image: omniparDetails, 
+    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    type: 'Logo design', 
+    year: 2017
+};
+
+const projectClaimscheck: IProject = {
+    name: 'SKIM Analytics - Claims Check',
+    image: claimscheckDetails, 
+    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    type: 'Logo design', 
+    year: 2017
+};
+
 const projectSkim: IProject = {
     name: 'SKIM Analytics - Virtual Shelf',
     image: skimDetails, 
@@ -79,22 +95,6 @@ const projectMouseophonic: IProject = {
     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     type: 'Design / Android developer', 
     year: 2014
-};
-
-const projectOmnipar: IProject = {
-    name: 'SKIM Analytics - Omnipar',
-    image: omniparDetails, 
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    type: 'Design - Logo', 
-    year: 2017
-};
-
-const projectClaimscheck: IProject = {
-    name: 'SKIM Analytics - Claims Check',
-    image: claimscheckDetails, 
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    type: 'Design - Logo', 
-    year: 2017
 };
 
 const projectErikNordmark: IProject = {
@@ -141,11 +141,11 @@ export class ProjectGrid extends React.Component<ProjectGridProps, ProjectGridSt
                 <ProjectDetails handler={this.handler} open={this.state.open} leftAnimation={this.state.leftAnimation} rightAnimation={this.state.rightAnimation} project={this.state.project} contentPlacement={this.state.contentPlacement}/>
                 <Project image={stena} onClick={this.handler.bind(this, projectStena, Direction.Left, Direction.Down, Placement.Left)}/>
                 <Project image={volvo} onClick={this.handler.bind(this, projectVolvo, Direction.Down, Direction.Right, Placement.Right)}/>
+                <Project image={omnipar} onClick={this.handler.bind(this, projectOmnipar, Direction.Up, Direction.Right, Placement.Left)}/>
+                <Project image={claimscheck} onClick={this.handler.bind(this, projectClaimscheck, Direction.Up, Direction.Down, Placement.Left)}/>
                 <Project image={virtualShelf} onClick={this.handler.bind(this, projectSkim, Direction.Up, Direction.Down, Placement.Left)}/>
                 <Project image={milestone} onClick={this.handler.bind(this, projectMilestone, Direction.Down, Direction.Up, Placement.Left)}/>
                 <Project image={mouseophonic} onClick={this.handler.bind(this, projectMouseophonic, Direction.Left, Direction.Right, Placement.Left)}/>
-                <Project image={omnipar} onClick={this.handler.bind(this, projectOmnipar, Direction.Up, Direction.Right, Placement.Left)}/>
-                <Project image={claimscheck} onClick={this.handler.bind(this, projectClaimscheck, Direction.Up, Direction.Down, Placement.Left)}/>
                 {/* <Project image={n} onClick={this.handler}/> */}
                 <Project image={eriknordmark}onClick={this.handler.bind(this, projectErikNordmark, Direction.Down, Direction.Up, Placement.Left)}/>
             </section>

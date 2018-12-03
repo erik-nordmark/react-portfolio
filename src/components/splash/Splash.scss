@@ -28,7 +28,8 @@ $red-hover: #F44336;
 
     img {
         object-fit: contain;
-        height: 300px;
+        max-height: 300px;
+        width: auto;
         margin-bottom: -250px;
      }
 
@@ -36,19 +37,19 @@ $red-hover: #F44336;
         
     }
 
-    .text-container {
-        width: 50%;
-        max-width: 900px;
-        height: 200px;
-        padding: 3em;
-        text-align: left;
-        font-size: 1.3em;
-        font-weight: 300;
-        display: flex;
-        flex-direction: column;
-        justify-content: center; 
-        color: #ffffff;
-    }
+    // .text-container {
+    //     width: 50%;
+    //     max-width: 900px;
+    //     height: 200px;
+    //     padding: 3em;
+    //     text-align: left;
+    //     font-size: 1.3em;
+    //     font-weight: 300;
+    //     display: flex;
+    //     flex-direction: column;
+    //     justify-content: center; 
+    //     color: #ffffff;
+    // }
 
     p {
         color: #ffffff;
@@ -66,8 +67,14 @@ $red-hover: #F44336;
 
 @media only screen and (max-width: 767px) {
     /* phones */
-    .text-container {
-        width: 100% !important;
-        height: 200px !important;
+    .splash {
+        height: 280px;
+        margin-bottom: 100px;
+
+        img {
+            max-height: 200px;
+            margin-bottom: -170px;
+         }
     }
+
 }
