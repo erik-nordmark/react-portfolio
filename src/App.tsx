@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.scss';
 
-import { Header } from "./components/header/header";
+import { Header } from "./components/header/Header";
 import { Splash } from "./components/Splash/Splash";
 import { ProjectGrid } from "./components/ProjectGrid/ProjectGrid";
 import { Resume } from "./components/Resume/Resume";

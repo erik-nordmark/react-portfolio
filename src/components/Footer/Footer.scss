@@ -1,0 +1,215 @@
+// Colors
+$red: #FF5252;
+$red-hover: #F44336;
+
+footer {
+    background-color: #424242;
+    min-height: 400px;
+    flex: 1;
+    display: grid;
+    grid-template-columns: 15% 35% 35% 15%;
+    grid-template-rows:  65% 15% 10% 10%;
+    justify-content: space-evenly;
+    margin-top: 100px;
+    padding-top: 20px;
+    color: #ffffff;
+    font-size: 15px;
+}
+
+footer .about {
+    grid-column-start: 2;
+    grid-column-end: 3; 
+    display: grid; 
+    grid-template-columns: auto auto;
+    grid-template-rows:  85px auto;
+    margin-right: 50px;
+}
+
+footer .me {
+    background-image: url("../../assets/images/profile.png");
+    background-size: cover;
+    background-position: center center;
+    width: 130px;
+    height: 130px;
+    border-radius: 100%;
+    display: inline-flex;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    margin-bottom: 30px;
+}
+
+footer .contact {
+    grid-column-start: 3;
+    grid-column-end: 4;  
+    grid-row-start: 1;
+    grid-row-end: 2;
+    display: grid; 
+    grid-template-rows:  85px auto;
+}
+
+footer .about, footer .contact, footer .links { text-align: left; }
+footer .about p { 
+    grid-column-start: 2; 
+    grid-column-end: 3; 
+    grid-row-start: 2; 
+    padding: 0 0 0 20px;
+    margin: 0;
+    font-size: 16px;
+    letter-spacing: 0.01em;
+    line-height: 1.5;
+
+    a {
+        color: #ffffff;
+    }
+}
+
+footer .contact { width: 100%}
+
+footer h3 { color: $red; display: inline-flex; align-items: center; align-self: flex-start; font-size: 30px }
+footer svg { margin-right: 5px }
+footer form { width: 100%; margin: 0; padding: 0}
+
+footer form input {
+    width: 100%;
+    line-height: 25px;
+}
+
+footer form input, footer form textarea {
+    border-radius: 5px 5px 5px 5px;
+    margin-bottom: 0.8em;
+    padding: 0.3em;
+    border: 0 solid;
+    background: #c6bdb4;
+    width: 100%;
+    color: #000000;
+    letter-spacing: 0.08em;
+    font-size: 15px;
+}
+
+footer textarea {
+    min-height: 120px;
+}
+
+footer form input:focus, footer form textarea:focus{
+    outline: 0;
+}
+
+footer form .send {width: 150px; height: 40px; background: $red; box-shadow: 1px 1px 1px #222222; font-weight: 600; color: #ffffff }
+
+footer form .send:hover { background: $red-hover; }
+
+footer form .send:active { box-shadow: none; }
+
+.socialLinks {
+    grid-column-start: 1;
+    grid-column-end: -1;
+    grid-row-start: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    padding: 15px;
+}
+
+.copyright {
+    grid-column-start: 1;
+    grid-column-end: -1;
+    grid-row-start: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    margin-top: 10px;
+    padding: 5px;
+}
+
+@media screen and (max-width: 1200px) {
+    footer {
+        grid-template-columns: 5% 45% 45% 5%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    footer {
+        grid-template-columns: 2% 48% 48% 2%;
+    }
+}
+
+@media screen and (max-width: 812px) {
+    footer {
+        grid-template-columns: 100%;
+        grid-template-rows:  auto auto 50px 50px;
+        justify-content: space-between;
+        align-content: center;
+    }
+
+    footer h3 {  grid-column-start: 1;  grid-column-end: 3; align-self: center }
+
+    footer .about {
+        grid-column-start: 1;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        flex: 1;
+    }
+
+    footer .about p {
+        padding: 0;
+        margin: 0;
+    }
+    
+    footer .contact {
+        grid-column-start: 1;
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
+
+    footer form .send { width: 100% }
+
+}
+
+
+@media only screen 
+and (max-device-width : 812px) {
+    footer {
+        grid-template-columns: 100%;
+        grid-template-rows:  auto auto 50px 50px;
+        align-self: center;
+        padding: 20px;
+    }
+
+    footer h3 {  grid-column-start: 1;  grid-column-end: 3; align-self: center }
+
+    footer .about {
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        flex: 1;
+    }
+
+    footer .about p {
+        padding: 0;
+        margin: 0;
+    }
+    
+    footer .contact {
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
+
+    footer form .send { width: 100%; }
+
+}
