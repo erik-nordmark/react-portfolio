@@ -101,23 +101,28 @@ $red: #FF5252;
             }
         }
 
-        .divider {
-            width: 400px;
-            height: 20px;
-            bottom: 0px;
-            left: 0;
-            border-bottom: 1px solid #777777;
-            margin: 20px 0 20px 0;
-        }
+        .visit {
 
-        button {
-            width: 300px;
-            height: 60px;
-            border-radius: 60px;
-            background-color: #222222;
-            margin-top: 20px;
-            color: #ffffff;
-            font-size: 22px;
+            display: none;
+
+            .divider {
+                width: 400px;
+                height: 20px;
+                bottom: 0px;
+                left: 0;
+                border-bottom: 1px solid #777777;
+                margin: 20px 0 20px 0;
+            }
+    
+            button {
+                width: 300px;
+                height: 60px;
+                border-radius: 60px;
+                background-color: #222222;
+                margin-top: 20px;
+                color: #ffffff;
+                font-size: 22px;
+            }
         }
     }
 
