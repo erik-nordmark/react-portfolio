@@ -41,8 +41,10 @@ export class ProjectDetails extends React.Component<ProjectDetailsProps, Project
     componentDidUpdate() {
         if (this.props.open) {
             document.body.style.overflow = "hidden";
+            document.body.style.height = "0";
         } else {
             document.body.style.overflow = "auto"
+            document.body.style.height = "auto";
         }
     }
 
