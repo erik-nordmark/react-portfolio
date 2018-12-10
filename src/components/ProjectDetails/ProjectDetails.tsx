@@ -1,7 +1,8 @@
 import * as Ionicons from 'react-icons/io'
 import * as React from "react";
 import './ProjectDetails.scss';
-import { IProject } from '../ProjectGrid/ProjectGrid';
+import { Router, Link } from 'react-router-dom';
+import { IProject } from '../../App';
 
 export enum Direction {
     Up = 'fade-up',
@@ -17,11 +18,9 @@ export enum Placement {
 
 interface ProjectDetailsProps {
     open: boolean,
-    handler: any,
     leftAnimation: Direction;
     rightAnimation: Direction;
     project: IProject;
-    contentPlacement: Placement
 }
 
 interface ProjectDetailsState {
@@ -31,27 +30,18 @@ interface ProjectDetailsState {
 
 export class ProjectDetails extends React.Component<ProjectDetailsProps, ProjectDetailsState> {
 
-
-    state = { open: this.props.open, project: this.props.project}
-
-    constructor(props:any, state: any) {
-        super(props, state);
-    }
-
     componentDidUpdate() {
         if (this.props.open) {
             document.body.style.overflow = "hidden";
-            document.body.style.height = "0";
         } else {
             document.body.style.overflow = "auto"
-            document.body.style.height = "auto";
         }
     }
 
     render() {
         return (
-            <div className="project-details" style={{opacity: this.props.open ? 1 : 0, visibility: this.props.open ? 'visible' : 'hidden'}}>
-                <div className="close-project-details" style={{opacity: this.props.open ? 1 : 0.5}} onClick = {this.props.handler} ><Ionicons.IoIosClose /></div>
+            <div className="project-details">
+                <Link to="/" className="close-project-details" style={{opacity: this.props.open ? 1 : 0.5}}><Ionicons.IoIosClose /></Link>
                 <div className="left-side">
                     <img src={String(this.props.project.image)} className={this.props.open ? this.props.leftAnimation : ''}></img>
                 </div>
