@@ -29,14 +29,19 @@ interface ProjectDetailsState {
 }
 
 export class ProjectDetails extends React.Component<ProjectDetailsProps, ProjectDetailsState> {
+    targetElement:any = null;
 
-    componentDidUpdate() {
-        if (this.props.open) {
-            document.body.style.overflow = "hidden";
-        } else {
-            document.body.style.overflow = "auto"
-        }
+    componentDidMount() {
+        document.body.style.overflow = "hidden";
+        document.body.addEventListener('touchmove', function(e) { 
+            e.preventDefault(); 
+        });
     }
+
+    componentWillUnmount() {
+        document.body.style.overflow = "auto"
+    }
+
 
     render() {
         return (
