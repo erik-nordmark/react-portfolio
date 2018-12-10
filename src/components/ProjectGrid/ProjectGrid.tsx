@@ -1,7 +1,6 @@
 import * as React from "react";
 import './ProjectGrid.scss';
 import { Project } from "../Project/Project";
-import { Direction, Placement } from '../ProjectDetails/ProjectDetails';
 import { BrowserRouter as Route, Link } from 'react-router-dom';
 
 const stena = require("../../assets/images/stena.png");
