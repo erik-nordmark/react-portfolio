@@ -1,13 +1,9 @@
 import React, { Component } from 'react';
 import './App.scss';
 
-import { Header } from "./components/Header/Header";
-import { Splash } from "./components/Splash/Splash";
-import { ProjectGrid } from "./components/ProjectGrid/ProjectGrid";
-import { Resume } from "./components/Resume/Resume";
-import { Footer } from "./components/Footer/Footer";
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import { ProjectDetails, Direction } from './components/ProjectDetails/ProjectDetails';
+import { Home } from './components/Home/Home';
 
 const stenaDetails = require("./assets/images/stena_details.png");
 const volvoDetails = require("./assets/images/volvo_details.png");
@@ -90,18 +86,14 @@ const projectErikNordmark: IProject = {
   year: 2018
 };
 
-class App extends Component {
+export class App extends Component {
   render() {
     return (
       <Router>
         <div className="App">
-          <Header firstName="erik" lastName="nordmark" />
-          <Splash quote="Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away." author="Antoine de Saint-Exupéry" />
-          <ProjectGrid />
-          <Resume />
-          <Footer text="this is a footer" />
           <Switch>
-              <Route path="/stena" render={(props) => <ProjectDetails {...props} open={true} project={projectStena} leftAnimation={Direction.Up} rightAnimation={Direction.Right} />}/>
+              <Route exact path="/" component={Home} />}/>
+              <Route exact path="/stena" render={(props) => <ProjectDetails {...props} open={true} project={projectStena} leftAnimation={Direction.Up} rightAnimation={Direction.Right} />}/>
               <Route path="/volvo" render={(props) => <ProjectDetails {...props} open={true} project={projectVolvo} leftAnimation={Direction.Left} rightAnimation={Direction.Down} />}/>
               <Route path="/omnipar" render={(props) => <ProjectDetails {...props} open={true} project={projectOmnipar} leftAnimation={Direction.Down} rightAnimation={Direction.Up} />}/>
               <Route path="/claims-check" render={(props) => <ProjectDetails {...props} open={true} project={projectClaimscheck} leftAnimation={Direction.Up} rightAnimation={Direction.Right} />}/>
@@ -112,7 +104,6 @@ class App extends Component {
           </Switch>
         </div>
       </Router>
-      
     );
   }
 }
