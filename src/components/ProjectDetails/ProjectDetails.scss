@@ -277,6 +277,11 @@ $red: #FF5252;
         grid-template-columns: 1fr;
         grid-template-rows: 700px auto;
 
+        .close-project-details {
+            margin: 15px;
+            font-size: 100px;
+        }
+
         .left-side {
             justify-content: center; 
         }
