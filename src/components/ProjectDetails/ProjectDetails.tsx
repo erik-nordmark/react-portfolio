@@ -33,7 +33,7 @@ export class ProjectDetails extends React.Component<ProjectDetailsProps, Project
 
     componentDidMount() {
         document.body.style.overflow = "hidden";
-        document.body.style.maxHeight = "100vh";
+        document.body.style.height = "100vh";
 
         window.scrollTo(0, 0);
 
@@ -44,7 +44,7 @@ export class ProjectDetails extends React.Component<ProjectDetailsProps, Project
 
     componentWillUnmount() {
         document.body.style.overflow = "auto"
-        document.body.style.maxHeight = "auto";
+        document.body.style.height = "auto";
     }
 
 
