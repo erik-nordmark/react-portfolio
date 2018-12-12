@@ -34,7 +34,9 @@ export class ProjectDetails extends React.Component<ProjectDetailsProps, Project
     componentDidMount() {
         document.body.style.overflow = "hidden";
         document.body.style.maxHeight = "100vh";
-        
+
+        window.scrollTo(0, 0);
+
         document.body.addEventListener('touchmove', function(e) { 
             e.preventDefault(); 
         });
