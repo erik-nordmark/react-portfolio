@@ -1,9 +1,5 @@
 $red: #FF5252;
 
-:root {
-    --app-height: 100%;
- }
-
 .project-details {
     position: fixed;
     top: 0;
@@ -17,19 +13,17 @@ $red: #FF5252;
     object-fit: contain;
     background-position: center center;
     display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows:  100%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:  1fr;
     overscroll-behavior: contain;
 
     padding: 0;
     margin: 0;
     overflow: hidden;
     width: 100vw;
-    height: 100vh;
 
-    @media not all and (hover:hover) {
-        height: var(--app-height);
-    }
+    height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+    height: calc(var(--vh, 1vh) * 100);
 
     .close-project-details {
         position: absolute;
