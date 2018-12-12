@@ -111,7 +111,15 @@ footer {
     font-size: 40px;
     padding: 15px;
 
+    a:link {
+        color: #fff;
+    }
+
     a:visited {
+        color: #fff;
+    }
+
+    a:active {
         color: #fff;
     }
 }
@@ -221,5 +229,9 @@ and (max-device-width : 812px) {
     }
 
     footer form .send { width: 100%; }
+
+    .socialLinks {
+        font-size: 60px;
+    }
 
 }
