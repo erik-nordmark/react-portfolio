@@ -6,7 +6,9 @@ export interface FooterProps { text: string; }
 
 export class Footer extends React.Component<FooterProps, {}> {
 
+    private born:any = new Date(1987);
     public year = new Date().getFullYear();
+    public age = this.year - this.born;
 
     render() {
         return ( 
@@ -16,8 +18,8 @@ export class Footer extends React.Component<FooterProps, {}> {
                 {/* <h3><Ionicons.IoIosPaperPlane />about</h3> */}
                 <div className="me"></div>
                 <p>Here I am - something as unusual as a developer with a sense of humor and an eye for design.
-                My name is Erik Nordmark and I am <script>document.write(new Date().getFullYear() - new Date(1987))</script> years old. I am living in Gothenburg where I am working as a software developer consultant for Devies.
-                For more information please visit my <a href="https://linkedin.com/in/nordmarkerik" title="My LinkedIn page">LinkedIn</a>.
+                My name is Erik Nordmark and I am { this.age } years old. I am living in Gothenburg where I am working as a software developer consultant for Devies.
+                For more information please visit my <a target="_blank" href="https://linkedin.com/in/nordmarkerik" title="My LinkedIn page">LinkedIn</a>.
                 </p>
             </div>
             <div className="contact">
@@ -31,7 +33,10 @@ export class Footer extends React.Component<FooterProps, {}> {
                     <input type="submit" name="submit" value="Send" className="send" />
                 </form>
             </div>
-            <div className="socialLinks"><Ionicons.IoLogoLinkedin /><Ionicons.IoLogoGithub /></div>
+            <div className="socialLinks">
+                <a target="_blank" href="https://www.linkedin.com/in/nordmarkerik" title="My LinkedIn page"><Ionicons.IoLogoLinkedin /></a>
+                <a target="_blank" href="https://github.com/hxmn" title="My GitHub page"><Ionicons.IoLogoGithub /></a>
+            </div>
             <div className="copyright">© {this.year} Erik Nordmark</div>
         </footer>
         );
