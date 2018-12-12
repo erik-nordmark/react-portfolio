@@ -1,8 +1,10 @@
 $red: #FF5252;
 
+:root {
+    --app-height: 100%;
+ }
+
 .project-details {
-    width: 100vw;
-    height: 100vh;
     position: fixed;
     top: 0;
     left: 0;
@@ -18,6 +20,16 @@ $red: #FF5252;
     grid-template-columns: 50% 50%;
     grid-template-rows:  100%;
     overscroll-behavior: contain;
+
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+
+    @media not all and (hover:hover) {
+        height: var(--app-height);
+    }
 
     .close-project-details {
         position: absolute;

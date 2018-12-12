@@ -40,6 +40,13 @@ export class ProjectDetails extends React.Component<ProjectDetailsProps, Project
         document.body.addEventListener('touchmove', function(e) { 
             e.preventDefault(); 
         });
+
+        const appHeight = () => {
+            const doc: any = document.documentElement;
+            doc.style.setProperty('--app-height', `${window.innerHeight}px`)
+        }
+        window.addEventListener('resize', appHeight)
+        appHeight()
     }
 
     componentWillUnmount() {
