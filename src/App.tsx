@@ -93,13 +93,13 @@ export class App extends Component {
         <div className="App">
           <Switch>
               <Route exact path="/" component={Home} />}/>
-              <Route exact path="/stena" render={(props) => <ProjectDetails {...props} open={true} project={projectStena} leftAnimation={Direction.Up} rightAnimation={Direction.Right} />}/>
-              <Route path="/volvo" render={(props) => <ProjectDetails {...props} open={true} project={projectVolvo} leftAnimation={Direction.Left} rightAnimation={Direction.Down} />}/>
-              <Route path="/omnipar" render={(props) => <ProjectDetails {...props} open={true} project={projectOmnipar} leftAnimation={Direction.Up} rightAnimation={Direction.Down} />}/>
+              <Route exact path="/stena" render={(props) => <ProjectDetails {...props} open={true} project={projectStena} leftAnimation={Direction.Down} rightAnimation={Direction.Right} />}/>
+              <Route path="/volvo" render={(props) => <ProjectDetails {...props} open={true} project={projectVolvo} leftAnimation={Direction.Left} rightAnimation={Direction.Up} />}/>
+              <Route path="/omnipar" render={(props) => <ProjectDetails {...props} open={true} project={projectOmnipar} leftAnimation={Direction.Down} rightAnimation={Direction.Up} />}/>
               <Route path="/claims-check" render={(props) => <ProjectDetails {...props} open={true} project={projectClaimscheck} leftAnimation={Direction.Left} rightAnimation={Direction.Right} />}/>
-              <Route path="/virtual-shelf" render={(props) => <ProjectDetails {...props} open={true} project={projectSkim} leftAnimation={Direction.Left} rightAnimation={Direction.Down} />}/>
-              <Route path="/milestone" render={(props) => <ProjectDetails {...props} open={true} project={projectMilestone} leftAnimation={Direction.Up} rightAnimation={Direction.Right} />}/>
-              <Route path="/mouseophonic" render={(props) => <ProjectDetails {...props} open={true} project={projectMouseophonic} leftAnimation={Direction.Up} rightAnimation={Direction.Down} />}/>
+              <Route path="/virtual-shelf" render={(props) => <ProjectDetails {...props} open={true} project={projectSkim} leftAnimation={Direction.Left} rightAnimation={Direction.Up} />}/>
+              <Route path="/milestone" render={(props) => <ProjectDetails {...props} open={true} project={projectMilestone} leftAnimation={Direction.Down} rightAnimation={Direction.Right} />}/>
+              <Route path="/mouseophonic" render={(props) => <ProjectDetails {...props} open={true} project={projectMouseophonic} leftAnimation={Direction.Down} rightAnimation={Direction.Up} />}/>
               <Route path="/eriknordmark" render={(props) => <ProjectDetails {...props} open={true} project={projectErikNordmark} leftAnimation={Direction.Left} rightAnimation={Direction.Right} />}/>
           </Switch>
         </div>

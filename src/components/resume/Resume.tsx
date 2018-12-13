@@ -35,7 +35,7 @@ export class Resume extends React.Component<ResumeProps, {}> {
                     end="Q3 2017"
                     position="Web developer"
                     location="Gothenburg, SWEDEN"
-                    text="I continued to work on the Virtual Shelf back in Gothenburg, where I was a part of SKIM's new Sweden office."
+                    text="I continued to work on the Virtual Shelf back in Gothenburg, where I was a part of SKIM's first office in Sweden."
                     />
                 <Assignment
                     company="SKIM Analytics"
