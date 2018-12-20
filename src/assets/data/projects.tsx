@@ -74,7 +74,7 @@ export const projectSkim: IProject = {
     type: 'Fullstack Web developer',
     year: 2016,
     tags: [
-        'angular',
+        'angularjs',
         'html',
         'css',
         'node',
