@@ -291,7 +291,7 @@ $red: #FF5252;
         }
 
         .text-wrapper {
-            margin: 50px;
+            //margin: 50px;
 
             h2 {
                 font-size: 40px;
@@ -309,7 +309,7 @@ $red: #FF5252;
         }
     
         .text-wrapper {
-            margin: 30px ;
+            //margin: 30px ;
             display: flex;
             flex-direction: column;
     
@@ -339,11 +339,11 @@ $red: #FF5252;
 @media only screen and (max-device-width: 812px) {
     .project-details {
         grid-template-columns: 1fr;
-        grid-template-rows: 700px auto;
+        grid-template-rows: 400px auto;
 
         .close-project-details {
-            margin: 15px;
-            font-size: 130px;
+            // margin: 15px;
+            // font-size: 130px;
         }
 
         .left-side {
@@ -364,15 +364,15 @@ $red: #FF5252;
         }
 
         .text-wrapper {
-            margin: 50px;
-            font-size: 130%;
+            margin: 0;
+            // font-size: 130%;
 
             h2 {
-                font-size: 60px;
+                // font-size: 60px;
             }
 
             p {
-                font-size: 25px;
+                // font-size: 25px;
             }
         }
     }
