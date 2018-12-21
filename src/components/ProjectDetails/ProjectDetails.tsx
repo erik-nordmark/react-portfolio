@@ -1,7 +1,7 @@
 import * as Ionicons from 'react-icons/io'
 import * as React from "react";
 import './ProjectDetails.scss';
-import { Router, Link } from 'react-router-dom';
+import { Router, Route, Link } from 'react-router-dom';
 import { IProject } from '../../assets/data/projects';
 
 export enum Direction {
@@ -93,9 +93,10 @@ export class ProjectDetails extends React.Component<ProjectDetailsProps, Project
     }
 
     render() {
+
         return (
             <div className="project-details">
-                <Link to="/" className="close-project-details" style={{ opacity: this.props.open ? 1 : 0.5 }}><Ionicons.IoIosClose /></Link>
+                <Link to="/" className="close-project-details" style={{ opacity: this.props.open ? 1 : 0.5 }}><Ionicons.IoIosClose /></Link>             
                 <div className="left-side">
                     <img src={String(this.props.project.image)} className={this.props.open ? this.props.leftAnimation : ''}></img>
                 </div>
