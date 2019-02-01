@@ -111,10 +111,12 @@ export class ProjectDetails extends React.Component<ProjectDetailsProps, Project
                         <ul className="tags-list">
                             {this.listTags()}
                         </ul>
+                        {this.props.project.link.length > 0 &&
                         <div className="visit">
                             <div className="divider"></div>
-                            <button>VISIT</button>
-                        </div>
+                            <a target="_blank" href={this.props.project.link}><button>VISIT</button></a>
+                        </div> 
+                        }    
                     </div>
                 </div>
             </div>

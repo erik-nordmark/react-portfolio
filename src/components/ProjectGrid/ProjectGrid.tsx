@@ -3,6 +3,7 @@ import './ProjectGrid.scss';
 import { Project } from "../Project/Project";
 import { BrowserRouter as Route, Link } from 'react-router-dom';
 
+const devies = require("../../assets/images/devies.png");
 const stena = require("../../assets/images/stena.png");
 const volvo = require("../../assets/images/volvo.png");
 const virtualShelf = require("../../assets/images/virtual-shelf.png");
@@ -27,6 +28,7 @@ export class ProjectGrid extends React.Component<{}, {}> {
         return (
             <section className="projects">
                 <h2>Projects</h2>
+                <Link to="/devies"><Project image={devies} /></Link>
                 <Link to="/stena"><Project image={stena} /></Link>
                 <Link to="/volvo"><Project image={volvo} /></Link>
                 <Link to="/omnipar"><Project image={omnipar}/></Link>

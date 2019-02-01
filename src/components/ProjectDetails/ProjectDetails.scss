@@ -179,8 +179,6 @@ $red: #FF5252;
 
         .visit {
 
-            display: none;
-
             .divider {
                 width: 400px;
                 height: 20px;
@@ -198,7 +196,10 @@ $red: #FF5252;
                 margin-top: 20px;
                 color: #ffffff;
                 font-size: 22px;
+                cursor: pointer;
             }
+
+            button:focus {outline:0;}
         }
     }
 
