@@ -17,8 +17,8 @@ export class Footer extends React.Component<FooterProps, {}> {
                 <h3>/ about</h3>
                 {/* <h3><Ionicons.IoIosPaperPlane />about</h3> */}
                 <div className="me"></div>
-                <p>Here I am - something as unusual as a developer with a sense of humor and an eye for design.
-                My name is Erik Nordmark and I am { this.age } years old. I am living in Gothenburg where I am working as a software developer consultant for Devies.
+                <p>Here I am - something as unusual as a fullstack developer with an eye for design and a sense of humor.
+                My name is Erik Nordmark and I am { this.age } years old. I am living in Gothenburg, Sweden, where I am working as a software developer consultant for Devies.
                 For more information please visit my <a target="_blank" href="https://linkedin.com/in/nordmarkerik" title="My LinkedIn page">LinkedIn</a>.
                 </p>
             </div>
