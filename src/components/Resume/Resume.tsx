@@ -17,7 +17,7 @@ export class Resume extends React.Component<ResumeProps, {}> {
                     end=""
                     position="Fullstack developer"
                     location="Gothenburg, SWEDEN"
-                    text="Swegon is the market leader in energy-efficient ventilation and indoor climate systems. The business comprises five different business areas and has 2,200 employees in Europe, North America, and Asia. I have two separate assignments here at Swegon. One is to update and modernize their current print service in C # and Razor. The other is to be part of the front-end team, building new features and maintenance in their current React application."
+                    text="Swegon is the market leader in energy-efficient ventilation and indoor climate systems. The business comprises five different business areas and has 2,200 employees in Europe, North America, and Asia. I have two separate assignments here at Swegon. One is to update and modernize their current print service in C# and Razor. The other one is to be part of the front-end team, building new features and maintenance in their current React application."
                     />
                 <Assignment
                     company="Stena Recycling"
