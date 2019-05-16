@@ -24,7 +24,6 @@ export class Footer extends React.Component<FooterProps, {}> {
             </div>
             <div className="contact">
                 <h3>/ contact</h3>
-                {/* <h3><Ionicons.IoIosContact />contact</h3> */}
                 <form>
                     Email:
                     <input type="text" name="email" placeholder="name@mail.com" />
@@ -36,6 +35,8 @@ export class Footer extends React.Component<FooterProps, {}> {
             <div className="socialLinks">
                 <a target="_blank" href="https://www.linkedin.com/in/nordmarkerik" title="My LinkedIn page"><Ionicons.IoLogoLinkedin /></a>
                 <a target="_blank" href="https://github.com/hxmn" title="My GitHub page"><Ionicons.IoLogoGithub /></a>
+                <a target="_blank" href="mailto:me@eriknordmark.com" title="My Email"><Ionicons.IoIosPaperPlane /></a>
+
             </div>
             <div className="copyright">© {this.year} Erik Nordmark</div>
         </footer>
