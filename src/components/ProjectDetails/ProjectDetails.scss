@@ -345,12 +345,11 @@ $red: #FF5252;
     .project-details {
         overflow-y: scroll;
         grid-template-columns: 100vw;
-        grid-template-rows: 400px 100%;
+        grid-template-rows: 400px calc(100% + 150px);
 
         .close-project-details {
             margin: 15px;
             z-index: 10000;
-            // font-size: 130px;
         }
 
         .left-side {
@@ -371,6 +370,10 @@ $red: #FF5252;
         .text-wrapper {
             margin: 10px;
             max-width: 90%;
+
+            h2 {
+                font-size: 35px;
+            }
 
             .visit {
 
