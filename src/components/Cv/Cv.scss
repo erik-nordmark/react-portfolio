@@ -14,14 +14,36 @@ $red-hover: #F44336;
     margin: 30px 0 20px 0;
 }
 
+.resume {
+
+    a:link {
+        text-decoration: none;
+        color: $red;
+      }
+      
+      a:visited {
+        text-decoration: none;
+      }
+      
+      a:hover {
+        text-decoration: underline;
+        color: $red-hover;
+      }
+      
+      a:active {
+        text-decoration: none;
+      }
+}
+
 .full {
     width: 70vw;
     margin: 0 auto;
+
+    > div {
+        width: 70%;
+    }
 }
 
-.full > div {
-    width: 70%;
-}
 
 .contact-container {
     display: inline-flex;
@@ -86,4 +108,15 @@ $red-hover: #F44336;
 @page {
     orientation: landscape;
     margin: 0; 
+}
+
+@media screen and (max-width: 1000px) {
+    .full {
+        width: 100vw;
+        margin: 0 auto;
+
+        > div {
+            width: 90%;
+        }
+    }
 }

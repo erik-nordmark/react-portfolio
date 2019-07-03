@@ -43,8 +43,8 @@ h5 {
 
     li {
         list-style: none;
-        display: inline;
-        margin-right: 5px;
+        display: inline-flex;
+        margin: 0 5px 5px 0;
         text-transform: uppercase;
         background-color: #FF5252;
         border-radius: 10px;
