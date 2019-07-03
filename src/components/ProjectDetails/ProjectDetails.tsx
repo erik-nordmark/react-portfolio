@@ -45,10 +45,10 @@ export class ProjectDetails extends React.Component<ProjectDetailsProps, Project
         document.body.style.height = "auto";
     }
 
+    // TODO extract to untils
     listTags() {
         if (this.props.project.tags.length > 0) {
             return this.props.project.tags.map(function (tag, i) {
-                console.log(tag);
                 switch (tag) {
                     case 'angular':
                     return <li key={i} id="angular">{tag}</li>;

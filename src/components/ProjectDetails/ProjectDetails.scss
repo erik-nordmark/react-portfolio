@@ -80,67 +80,6 @@ $red: #FF5252;
             line-height: 180%;
         }
 
-        .tags-list {
-            padding: 0;
-            margin: 0;
-
-            li {
-                list-style: none;
-                display: inline;
-                margin-right: 5px;
-                text-transform: uppercase;
-                background-color: #FF5252;
-                border-radius: 10px;
-                padding: 10px;
-                font-size: 14px;
-                font-weight: 500;
-            }
-
-            #angular {
-                background-color: #f10025;
-            }
-
-            #android {
-                background-color: #9ac900;
-            }
-
-            #html {
-                background-color: #f73b04;
-            }
-
-            #css {
-                background-color: #1761f9;
-            }
-
-            #react {
-                background-color: #61dafb;
-            }
-
-            #photoshop {
-                background-color: #00caff;
-            }
-
-            #node {
-                background-color: #65b15a;
-            }
-
-            #mongodb {
-                background-color: #009d37;
-            }
-
-            #java {
-                background-color: #f66600;
-            }
-
-            #kotlin {
-                background-color: #ff8400;
-            }
-
-            #aws {
-                background-color: #f80;
-            }
-        }
-
         .specs::before {
             content: "/";
             font-size: 55px;
