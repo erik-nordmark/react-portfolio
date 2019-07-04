@@ -110,6 +110,16 @@ $red-hover: #F44336;
     margin: 0; 
 }
 
+@media screen and (max-width: 1500px) {
+    .full {
+        width: 80vw;
+
+        > div {
+            width: 90%;
+        }
+    }
+}
+
 @media screen and (max-width: 1000px) {
     .full {
         width: 100vw;

@@ -154,7 +154,7 @@ export const projectSkimGbg: IProject = {
 };
 
 export const projectSkimNyc: IProject = {
-    name: 'SKIM Analytics - Virtual Shelf',
+    name: 'SKIM Analytics',
     image: skimDetails,
     text: 'SKIM virtual shelf displays test products in a competitive environment, on a digital retail shelf, replicating the consumer’s in-store purchase situation. At SKIM, virtual shelves are utilized in Choice-Based Conjoint type of studies, often related to consumer goods portfolio pricing strategies. The power is in closely replicating a retail shelf, while at the same time maximizing our flexibility to influence different aspects of shelf design and measure their impact on consumer choice behavior.',
     type: 'Fullstack Web developer',
