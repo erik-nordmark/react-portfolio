@@ -99,6 +99,46 @@ $red-hover: #F44336;
     margin: 0 auto;
 }
 
+.areas {
+    display: grid;
+    grid-column: auto auto;
+    grid-gap: 50px;
+    line-height: 1.5em;
+
+    h3 {
+        font-weight: 500;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        letter-spacing: 0.01em;
+    }
+
+    .left {
+        grid-column-start: 1;
+    }
+
+    .right {
+        grid-column-start: 2;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .areas {
+        grid-column: 90%;
+        grid-gap: 0;
+
+        .left {
+            grid-column-start: 1;
+        }
+    
+        .right {
+            grid-column-start: 1;
+        }
+    }
+}
+
 @media print {
     .full {
         width: 100%;

@@ -2,16 +2,34 @@ import * as React from "react";
 import './Resume.scss';
 
 import { Assignment } from "../Assignment/Assignment"
+import { projects } from '../../assets/data/projects';
 
 export interface ResumeProps {
 }
 
 export class Resume extends React.Component<ResumeProps, {}> {
     render() {
+
+        const projectsToShow = projects.filter(project => project.resume);
+
         return (
             <section className="resume">
                 <h2>Resumé</h2>
-                <Assignment
+
+                { projectsToShow.map(project => {
+                    return <Assignment
+                    company={project.name}
+                    start={project.start}
+                    end={project.end}
+                    position={project.type}
+                    location={project.location}
+                    text={project.text}
+                    tags={project.tags}
+                    />
+                })
+                }
+
+                {/* <Assignment
                     company="Swegon"
                     start="Q1 2019"
                     end=""
@@ -58,7 +76,7 @@ export class Resume extends React.Component<ResumeProps, {}> {
                     replicating a retail shelf, while at the same time maximizing the flexibility to influence different aspects of
                     shelf design and measure their impact on consumer choice behavior. I built this system from the
                     ground up, working with the complete web stack, with everything from setting up the database to creating the design."
-                    />
+                    /> */}
             </section>
         );
     }

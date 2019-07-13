@@ -97,3 +97,13 @@ h5 {
         background-color: #f80;
     }
 }
+
+@media screen and (max-width: 1000px) {
+    .tags-list {
+    
+        li {
+            padding: 8px;
+            font-size: 12px;
+        }
+    }
+}
