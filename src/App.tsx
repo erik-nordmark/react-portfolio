@@ -10,12 +10,11 @@ import { Cv } from './components/Cv/Cv';
 
 export class App extends Component {
 
-  
-  
-  initializeReactGA() {
+  constructor(props: any) {
+    super(props);
     ReactGA.initialize('UA-12114335-2');
     ReactGA.pageview('/index');
-  }
+   }
 
   render() {
     return (
