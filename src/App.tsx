@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactGA from 'react-ga';
 import './App.scss';
 
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
@@ -8,6 +9,14 @@ import { projectDevies, projectStena, projectVolvo, projectOmnipar, projectClaim
 import { Cv } from './components/Cv/Cv';
 
 export class App extends Component {
+
+  
+  
+  initializeReactGA() {
+    ReactGA.initialize('UA-12114335-2');
+    ReactGA.pageview('/index');
+  }
+
   render() {
     return (
       <Router>
