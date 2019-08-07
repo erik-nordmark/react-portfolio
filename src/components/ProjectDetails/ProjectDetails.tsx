@@ -1,6 +1,7 @@
 import * as Ionicons from 'react-icons/io'
 import * as React from "react";
 import './ProjectDetails.scss';
+import ReactGA from 'react-ga';
 import { Router, Route, Link } from 'react-router-dom';
 import { IProject } from '../../assets/data/projects';
 
@@ -32,6 +33,8 @@ export class ProjectDetails extends React.Component<ProjectDetailsProps, Project
     targetElement: any = null;
 
     componentDidMount() {
+        ReactGA.pageview('/' + this.props.project.name);
+
         document.body.style.overflow = "hidden";
         document.body.style.height = "100vh";
 
