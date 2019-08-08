@@ -1,5 +1,6 @@
 import * as React from "react";
 import * as Ionicons from 'react-icons/io'
+import ReactGA from 'react-ga';
 
 import './Cv.scss';
 
@@ -9,6 +10,10 @@ import { projects } from '../../assets/data/projects';
 
 export class Cv extends Resume {
 
+    constructor(props: any) {
+        super(props);
+        ReactGA.pageview('/Cv');
+       }
     render() {
 
         const projectsToShow = projects.filter(project => project.resume);
