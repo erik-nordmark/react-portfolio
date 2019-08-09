@@ -1,4 +1,5 @@
 import * as React from "react";
+import ReactGA from 'react-ga';
 import { Header } from '../Header/Header';
 import { Splash } from '../Splash/Splash';
 import { ProjectGrid } from '../ProjectGrid/ProjectGrid';
@@ -7,6 +8,12 @@ import { Footer } from '../Footer/Footer';
 import './Home.scss'
 
 export class Home extends React.Component<{}, {}> {
+
+  constructor(props: any) {
+    super(props);
+    ReactGA.pageview('/index');
+  }
+   
 render() {
     return (
         <div className="Home">

@@ -7,6 +7,13 @@ $red-hover: #F44336;
     width: 70%;
 }
 
+@media print {
+    .assignment {
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+}
+
 .resume-header {
     display: inline-flex;
     align-items: baseline;

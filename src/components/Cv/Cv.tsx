@@ -55,6 +55,8 @@ export class Cv extends Resume {
                     text=""
                     />
                 
+                <div className="page-break" />
+                
                 <h2>Resumé</h2>
                 { projectsToShow.map(project => {
                     return <Assignment
@@ -68,6 +70,8 @@ export class Cv extends Resume {
                     />
                 })
                 }
+
+                <div className="page-break" />
 
                 <h2>Expertise</h2>
                 <div className="areas">

@@ -13,7 +13,6 @@ export class App extends Component {
   constructor(props: any) {
     super(props);
     ReactGA.initialize('UA-12114335-2');
-    ReactGA.pageview('/index');
    }
 
   render() {
