@@ -8,7 +8,7 @@ footer {
     flex: 1;
     display: grid;
     grid-template-columns: 15% 35% 35% 15%;
-    grid-template-rows:  65% 15% 10% 10%;
+    grid-template-rows:  65% 15% 5% 10% 5%;
     justify-content: space-evenly;
     margin-top: 100px;
     padding-top: 20px;
@@ -20,7 +20,7 @@ footer {
         grid-column-end: 3; 
         display: grid; 
         grid-template-columns: auto auto;
-        grid-template-rows:  85px auto;
+        grid-template-rows:  85px 100%;
         margin-right: 50px;
     }
     
@@ -104,7 +104,7 @@ footer {
 .socialLinks {
     grid-column-start: 1;
     grid-column-end: -1;
-    grid-row-start: 3;
+    grid-row-start: 4;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -131,13 +131,37 @@ footer {
 .copyright {
     grid-column-start: 1;
     grid-column-end: -1;
-    grid-row-start: 4;
+    grid-row-start: 5;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 14px;
     margin-top: 10px;
     padding: 5px;
+}
+
+@media screen and (max-width: 1400px) {
+    footer {
+        .about {
+            grid-column-start: 2;
+            grid-column-end: 3; 
+            display: grid; 
+            grid-template-columns: auto;
+            grid-template-rows:  85px auto;
+        }
+        
+        .me {
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 2;
+        }
+        .about p { 
+            grid-column-start: 1; 
+            grid-column-end: 2; 
+            grid-row-start: 3; 
+            padding: 0;
+        }
+    }
 }
 
 @media screen and (max-width: 1200px) {
