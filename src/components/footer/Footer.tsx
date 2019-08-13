@@ -18,7 +18,7 @@ export class Footer extends React.Component<FooterProps, {}> {
                 {/* <h3><Ionicons.IoIosPaperPlane />about</h3> */}
                 <div className="me"></div>
                 <p>Here I am - a fullstack developer with an eye for design and a sense of humor. My name is Erik Nordmark and I am { this.age } years old. I am living in Gothenburg, Sweden, where I am working as a software developer consultant for Devies.<br /><br />
-                As a developer and a designer I live by the quote <i>”Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away”</i>. I think code should be written in a way so that it is easy to read and understand over fast and overly optimized. Maintainability is everything.<br /><br />
+                As a developer and a designer I live by the quote <i>”Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away”</i>. I guess I am just a big fan of simplicity and clean design. I think code should be written in a way so that it is easy to read and understand over fast and overly optimized code. Maintainability is everything.<br /><br />
                 I am also passionated about craft beer, running and gaming (Dota 2).<br /><br />
                 For more information please visit my <a target="_blank" href="https://linkedin.com/in/nordmarkerik" title="My LinkedIn page">LinkedIn</a>.
                 </p>
