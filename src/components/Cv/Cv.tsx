@@ -4,6 +4,7 @@ import ReactGA from 'react-ga';
 
 import './Cv.scss';
 
+import { Link } from "react-router-dom";
 import { Assignment } from "../Assignment/Assignment"
 import { Resume } from "../Resume/Resume";
 import { projects } from '../../assets/data/projects';
@@ -13,7 +14,12 @@ export class Cv extends Resume {
     constructor(props: any) {
         super(props);
         ReactGA.pageview('/Cv');
-       }
+    }
+
+    componentDidMount() {
+        window.scrollTo(0,0);
+    }
+
     render() {
 
         const projectsToShow = projects.filter(project => project.resume);
@@ -130,6 +136,11 @@ export class Cv extends Resume {
                 <h2>Private</h2>
                 <Ionicons.IoIosRocket /> Harness <Ionicons.IoMdBeer /> Dota2 */}
                 <h5 className="references">References available on request</h5>
+                <div className="back-button">
+                    <Link to="/">
+                        Back to portolfio
+                    </Link>
+                </div>
             </section>
         );
     }

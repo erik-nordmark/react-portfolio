@@ -2,45 +2,77 @@
 $red: #FF5252;
 $red-hover: #F44336;
 
-.resume h1 {
-    font-size: 55px;
-    font-weight: 300;
-    text-transform: uppercase;
-    width: 100%;
-    color: #333333;
-    display: inline-block;
-    position: relative;
-    text-align: left;
-    margin: 30px 0 20px 0;
-}
-
-.resume {
-
-    a:link {
-        text-decoration: none;
-        color: $red;
-      }
-      
-      a:visited {
-        text-decoration: none;
-      }
-      
-      a:hover {
-        text-decoration: underline;
-        color: $red-hover;
-      }
-      
-      a:active {
-        text-decoration: none;
-      }
-}
-
 .full {
     width: 70vw;
     margin: 0 auto;
 
+
+    h1 {
+        font-size: 55px;
+        font-weight: 300;
+        text-transform: uppercase;
+        width: 100%;
+        color: #333333;
+        display: inline-block;
+        position: relative;
+        text-align: left;
+        margin: 30px 0 20px 0;
+    }
+
+    h2 {
+        font-size: 40px;
+        font-weight: 100;
+        text-transform: uppercase;
+        width: 100%;
+        color: #777777;
+        display: inline-block;
+        padding-bottom: 5px;
+        position: relative;
+        text-align: center;
+    }
+
+    h2:before {
+        content: "";
+        position: absolute;
+        width: 100px;
+        height: 1px;
+        bottom: 0;
+        left: calc(50% - 50px);
+        border-bottom: 1px solid #777777;
+    }
+
+    a:link {
+        color: $red;
+    }
+    
+    a:hover {
+        color: $red-hover;
+    }
+    
     > div {
         width: 70%;
+    }
+
+    .back-button {
+        position: sticky;
+        bottom: 0;
+        width: 100vw;
+        height: 60px;
+        background-color: #1e5799;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        a {
+            color: #ffffff;
+            font-weight: 600; 
+            text-transform: uppercase;
+        }
+
+        a:hover {
+            text-decoration: none;
+            color: #e7e7e7;
+        }
     }
 }
 
@@ -161,6 +193,10 @@ $red-hover: #F44336;
 @media print {
     .full {
         width: 100%;
+
+        .back-button {
+            display: none;
+        }
     }
 }
 
@@ -199,3 +235,4 @@ $red-hover: #F44336;
         height: 200px;
      }
   }
+  

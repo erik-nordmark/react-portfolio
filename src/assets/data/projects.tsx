@@ -23,6 +23,22 @@ export interface IProject {
     tags: string[]
 }
 
+export const projectVolvo2: IProject = {
+    name: 'Volvo Trucks',
+    image: volvoDetails,
+    text: 'At Volvo Trucks, they are building the next generation of trucks. I was part of the Android development team. They are working to build the new infotainment system that is planned to be released to the public in the near future. The software foundation is mainly Android, but is tightly connected with the truck-specific hardware and also requires knowledge working with network configuration. I did primarily work with an application that handles streams from auxiliary cameras on the network. Moreover, I was working with defining how to work with dependency injection together with Dagger.',
+    type: 'Architect',
+    year: 2019,
+    start: 'Q3 2019',
+    end: '',
+    link: '',
+    location: 'Gothenburg, SWEDEN',
+    resume: true,
+    tags: [
+        'javascript',
+    ]
+};
+
 export const projectSwegon: IProject = {
     name: 'Swegon',
     image: swegonDetails,
@@ -30,7 +46,7 @@ export const projectSwegon: IProject = {
     type: 'Fullstack developer',
     year: 2019,
     start: 'Q1 2019',
-    end: '',
+    end: 'Q3 2019',
     link: '',
     location: 'Gothenburg, SWEDEN',
     resume: true,
@@ -101,9 +117,9 @@ export const projectVolvo: IProject = {
 };
 
 export const projectOmnipar: IProject = {
-    name: 'SKIM Analytics - Omnipar',
+    name: 'SKIM Analytics',
     image: omniparDetails,
-    text: 'Logo I created for one of their products - Omnipar',
+    text: '',
     type: 'Logo design',
     year: 2017,
     start: '',
@@ -117,9 +133,9 @@ export const projectOmnipar: IProject = {
 };
 
 export const projectClaimscheck: IProject = {
-    name: 'SKIM Analytics - Claims Check',
+    name: 'SKIM Analytics',
     image: claimscheckDetails,
-    text: 'Logo I created for one of their products - Claims Check',
+    text: '',
     type: 'Logo design',
     year: 2017,
     start: '',
@@ -213,7 +229,7 @@ export const projectMouseophonic: IProject = {
 export const projectErikNordmark: IProject = {
     name: 'eriknordmark.com',
     image: erikNordmarkkDetails,
-    text: 'This website!',
+    text: '',
     type: 'Design / Web developer',
     year: 2018,
     start: '',
@@ -229,6 +245,7 @@ export const projectErikNordmark: IProject = {
 };
 
 export const projects: IProject[] = [
+    projectVolvo2,
     projectSwegon,
     projectDevies,
     projectStena,

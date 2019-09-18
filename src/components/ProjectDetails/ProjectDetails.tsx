@@ -101,7 +101,7 @@ export class ProjectDetails extends React.Component<ProjectDetailsProps, Project
             <div className="project-details">
                 <Link to="/" className="close-project-details" style={{ opacity: this.props.open ? 1 : 0.5 }}><Ionicons.IoIosClose /></Link>             
                 <div className="left-side">
-                    <img src={String(this.props.project.image)} className={this.props.open ? this.props.leftAnimation : ''}></img>
+                    <img src={String(this.props.project.image)} className={this.props.open ? this.props.leftAnimation : ''} alt={String(this.props.project.name)}></img>
                 </div>
                 <div className="right-side">
                     <div className={"text-wrapper " + (this.props.open ? this.props.rightAnimation : '')}>

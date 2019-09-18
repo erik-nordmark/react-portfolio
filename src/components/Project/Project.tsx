@@ -6,7 +6,7 @@ export class Project extends React.Component<any, {}> {
     render() {
         return (
             <div className="round" onClick={this.props.onClick}>
-                <img src={String(this.props.image)}></img>
+                <img src={String(this.props.image)} alt={String(this.props.image)}></img>
             </div>
         );
     }

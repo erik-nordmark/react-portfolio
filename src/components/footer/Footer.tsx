@@ -44,9 +44,9 @@ export class Footer extends React.Component<FooterProps, {}> {
                 </form>
             </div> */}
             <div className="socialLinks">
-                <a target="_blank" href="https://www.linkedin.com/in/nordmarkerik" title="My LinkedIn page"><Ionicons.IoLogoLinkedin /></a>
-                <a target="_blank" href="https://github.com/hxmn" title="My GitHub page"><Ionicons.IoLogoGithub /></a>
-                <a target="_blank" href="mailto:me@eriknordmark.com" title="My Email"><Ionicons.IoIosPaperPlane /></a>
+                <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/nordmarkerik" title="My LinkedIn page"><Ionicons.IoLogoLinkedin /></a>
+                <a target="_blank" rel="noopener" href="https://github.com/hxmn" title="My GitHub page"><Ionicons.IoLogoGithub /></a>
+                <a target="_blank" rel="noopener" href="mailto:me@eriknordmark.com" title="My Email"><Ionicons.IoIosPaperPlane /></a>
 
             </div>
             <div className="copyright">© {this.year} Nordev AB</div>

@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700');
 
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
@@ -8,34 +13,24 @@ body {
 
 }
 
-h2 {
-    font-size: 40px;
-    font-weight: 100;
-    text-transform: uppercase;
-    width: 100%;
-    color: #777777;
-    display: inline-block;
-    padding-bottom: 5px;
-    position: relative;
-    text-align: center;
-}
-
-h2:before {
-    content: "";
-    position: absolute;
-    width: 100px;
-    height: 1px;
-    bottom: 0;
-    left: calc(50% - 50px);
-    border-bottom: 1px solid #777777;
-}
-
 h5 {
     font-size: 20px;
     font-style: italic;
     font-weight: 100;
     text-transform: uppercase;
 }
+
+a:link {
+    text-decoration: none;
+  }
+  
+  a:visited {
+    text-decoration: none;
+  }
+  
+  a:active {
+    text-decoration: none;
+  }
 
 .tags-list {
     padding: 0;
