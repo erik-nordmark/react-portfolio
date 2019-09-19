@@ -1,5 +1,6 @@
 import * as Ionicons from 'react-icons/io'
 import * as React from "react";
+import { Helmet } from "react-helmet";
 import './ProjectDetails.scss';
 import ReactGA from 'react-ga';
 import { Router, Route, Link } from 'react-router-dom';
@@ -99,6 +100,11 @@ export class ProjectDetails extends React.Component<ProjectDetailsProps, Project
 
         return (
             <div className="project-details">
+                <Helmet>
+                    <meta name="description" content={this.props.project.text} />
+                    <meta name="keywords" content={this.props.project.name + "," + this.props.project.tags.map(tag => tag).join(",")} />
+                    <title>Erik Nordmark - {this.props.project.name}</title>
+                </Helmet>
                 <Link to="/" className="close-project-details" style={{ opacity: this.props.open ? 1 : 0.5 }}><Ionicons.IoIosClose /></Link>             
                 <div className="left-side">
                     <img src={String(this.props.project.image)} className={this.props.open ? this.props.leftAnimation : ''} alt={String(this.props.project.name)}></img>
