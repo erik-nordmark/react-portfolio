@@ -245,7 +245,7 @@ export const projectErikNordmark: IProject = {
 };
 
 export const projects: IProject[] = [
-    projectVolvo2,
+    //projectVolvo2,
     projectSwegon,
     projectDevies,
     projectStena,
