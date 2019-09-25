@@ -1,0 +1,103 @@
+// Colors
+$red: #ff5252;
+$red-hover: #F44336;
+
+.header-container {
+    width: 500px;
+    height: 65px;
+    align-self: flex-start;
+    display: inline-flex;
+    margin: auto 0;
+    position: relative;
+    left: 0px;
+    transform: translateX(-100%);
+    overscroll-behavior: contain;
+
+    .header-text {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 400px;
+        background-image:
+        linear-gradient(
+        to top left, 
+        dodgerblue,
+        rgb(79, 165, 252) 50%
+        );
+        background: $red;
+
+
+        h2 {
+            color: #ffffff;
+            font-weight: 600;
+            font-style: italic;
+            font-size: 25px;
+            text-align: right;
+            margin-right: 20px;
+            text-transform: uppercase;
+        }
+    }
+
+    .header-shape {
+        width: 75px;
+        height: 100%;
+        background-color: $red;
+        clip-path: polygon(0% 100%, 100% 0%, 0% 0%);
+    }
+}
+
+.fade-in {
+    animation: slide-in-left 1s ease;
+    animation-fill-mode: forwards;
+
+}
+
+.fade-out {
+    animation: slide-back-left 1s ease;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes slide-in-left {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+     }
+
+     100% {
+        opacity: 1;
+        transform: translateX(0);
+     }
+}
+
+
+@keyframes slide-back-left {
+    0% {
+        opacity: 1;
+        transform: translateX(0%);
+     }
+
+     100% {
+        opacity: 0;
+        transform: translateX(-100%);
+     }
+}
+
+@media screen and (max-width: 900px) {
+    .header-container {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .header-container {
+        display: none;
+    }
+}
+
+@media only screen 
+and (max-device-width : 812px) {
+    .header-container{
+        display: none;
+    }
+}

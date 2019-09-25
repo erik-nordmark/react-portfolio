@@ -1,6 +1,8 @@
 import * as Ionicons from 'react-icons/io'
 import * as React from "react";
+import { Helmet } from "react-helmet";
 import './ProjectDetails.scss';
+import ReactGA from 'react-ga';
 import { Router, Route, Link } from 'react-router-dom';
 import { IProject } from '../../assets/data/projects';
 
@@ -32,6 +34,8 @@ export class ProjectDetails extends React.Component<ProjectDetailsProps, Project
     targetElement: any = null;
 
     componentDidMount() {
+        ReactGA.pageview('/' + this.props.project.name);
+
         document.body.style.overflow = "hidden";
         document.body.style.height = "100vh";
 
@@ -45,10 +49,10 @@ export class ProjectDetails extends React.Component<ProjectDetailsProps, Project
         document.body.style.height = "auto";
     }
 
+    // TODO extract to untils
     listTags() {
         if (this.props.project.tags.length > 0) {
             return this.props.project.tags.map(function (tag, i) {
-                console.log(tag);
                 switch (tag) {
                     case 'angular':
                     return <li key={i} id="angular">{tag}</li>;
@@ -96,9 +100,14 @@ export class ProjectDetails extends React.Component<ProjectDetailsProps, Project
 
         return (
             <div className="project-details">
+                <Helmet>
+                    <meta name="description" content={this.props.project.text} />
+                    <meta name="keywords" content={this.props.project.name + "," + this.props.project.tags.map(tag => tag).join(",")} />
+                    <title>Erik Nordmark - {this.props.project.name}</title>
+                </Helmet>
                 <Link to="/" className="close-project-details" style={{ opacity: this.props.open ? 1 : 0.5 }}><Ionicons.IoIosClose /></Link>             
                 <div className="left-side">
-                    <img src={String(this.props.project.image)} className={this.props.open ? this.props.leftAnimation : ''}></img>
+                    <img src={String(this.props.project.image)} className={this.props.open ? this.props.leftAnimation : ''} alt={String(this.props.project.name)}></img>
                 </div>
                 <div className="right-side">
                     <div className={"text-wrapper " + (this.props.open ? this.props.rightAnimation : '')}>

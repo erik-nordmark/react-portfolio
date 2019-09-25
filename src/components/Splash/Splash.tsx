@@ -13,10 +13,7 @@ export class Splash extends React.Component<SplashProps, {}> {
         return (
         <div className="splash">
             <div className="text-container">
-                <img src={String(splash)}></img>
-                {/* <h1>#fact &darr;</h1>
-                <p>{this.props.quote}</p>
-                <i>-{this.props.author}</i> */}
+                <img src={String(splash)} alt="Hello World"></img>
             </div>
         </div>
         );

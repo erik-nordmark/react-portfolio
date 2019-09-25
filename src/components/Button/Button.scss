@@ -1,0 +1,50 @@
+// Colors
+$red: #127ed6;
+$red-hover: #4997d6;
+
+
+.button-container {
+    width: 100%;
+
+    > a {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;        text-decoration: none;
+
+        .button {
+            background-color: $red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 1px 1px 1px #222222; 
+            font-weight: 600; 
+            color: #ffffff;
+            text-transform: uppercase;
+        }
+        
+        .button:hover {
+            background-color: $red-hover;
+            box-shadow: 1px 1px 1px #6e6e6e; 
+            text-decoration: none;
+    
+        }
+    }
+
+    
+}
+
+
+@media only screen and (max-width: 767px) {
+    /* phones */
+    .button-container {
+
+        .button {
+            max-width: 70%;
+            margin: 0;
+        }
+    }
+
+}
