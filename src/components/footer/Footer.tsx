@@ -26,8 +26,6 @@ export class Footer extends React.Component<FooterProps, {}> {
             </div>
 
             <div className="about">
-                {/* <h3>/ about</h3> */}
-                {/* <h3><Ionicons.IoIosPaperPlane />about</h3> */}
                 <div className="me"></div>
                 <p>Here I am - a fullstack developer with an eye for design and a sense of humor. My name is Erik Nordmark and I am { this.age } years old. I am living in Gothenburg, Sweden, where I am working as a software developer consultant for Pelagio.<br /><br />
                 As a developer and a designer I live by the quote <i>”Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away”</i>. I guess I am just a big fan of simplicity and clean design. I think code should be written in a way so that it is easy to read and understand over fast and overly optimized code. Maintainability is everything.<br /><br />
@@ -35,16 +33,6 @@ export class Footer extends React.Component<FooterProps, {}> {
                 For more information please visit my <a target="_blank" href="https://linkedin.com/in/nordmarkerik" title="My LinkedIn page">LinkedIn</a>.
                 </p>
             </div>
-            {/* <div className="contact">
-                <h3>/ contact</h3>
-                <form>
-                    Email:
-                    <input type="text" name="email" placeholder="name@mail.com" />
-                    Message:
-                    <textarea name="message"></textarea>
-                    <input type="submit" name="submit" value="Send" className="send" />
-                </form>
-            </div> */}
             <div className="contact">
                 <div className="nordev-section"><img src={logo} alt="Nordev Logo" /></div>
                 <div className="socialLinks">

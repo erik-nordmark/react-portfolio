@@ -197,7 +197,6 @@ footer {
 
 @media screen and (max-width: 900px) {
     footer {
-        //grid-template-columns: 100%;
         grid-template-rows:  auto auto 50px auto;
         justify-content: space-between;
         align-content: center;
