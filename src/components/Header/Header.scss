@@ -3,16 +3,24 @@ $red: #FF5252;
 $red-hover: #F44336;
 
 header {
-    background-color: $red;
+    background-color: #1e5799;
     width: 100vw;
-    height: 80px;
+    height: 180px;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+
+    img {
+        width: 150px;
+        height: auto;
+    }
     
     h1 {
-        font-size: 35px;
-        font-weight: 600;
+        font-size: 40px;
+        font-weight: 200;
+        margin: -8px 0 0 0;
+        text-transform: uppercase;
     }
 
     a {
@@ -30,6 +38,7 @@ header {
     }
 
     .arrow-down {
+        display: none;
         width: 0;
         height: 0;
         border-left: 20px solid transparent;

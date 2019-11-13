@@ -5,7 +5,7 @@ import './App.scss';
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import { ProjectDetails, Direction } from './components/ProjectDetails/ProjectDetails';
 import { Home } from './components/Home/Home';
-import { projectDevies, projectStena, projectVolvo, projectOmnipar, projectClaimscheck, projectSkimNyc, projectMilestone, projectMouseophonic, projectErikNordmark, projectSwegon, projectVolvo2 } from './assets/data/projects';
+import { projectDevies, projectStena, projectVolvo, projectOmnipar, projectClaimscheck, projectSkimNyc, projectMilestone, projectMouseophonic, projectErikNordmark, projectSwegon, projectVolvoIt } from './assets/data/projects';
 import { Cv } from './components/Cv/Cv';
 
 export class App extends Component {
@@ -21,7 +21,7 @@ export class App extends Component {
         <div className="App">
           <Switch>
               <Route exact path="/" component={Home} />}/>
-              <Route exact path="/volvo2" render={(props) => <ProjectDetails {...props} open={true} project={projectVolvo2} leftAnimation={Direction.Left} rightAnimation={Direction.Up} />}/>
+              <Route exact path="/volvo-it" render={(props) => <ProjectDetails {...props} open={true} project={projectVolvoIt} leftAnimation={Direction.Left} rightAnimation={Direction.Up} />}/>
               <Route exact path="/swegon" render={(props) => <ProjectDetails {...props} open={true} project={projectSwegon} leftAnimation={Direction.Down} rightAnimation={Direction.Up} />}/>
               <Route exact path="/devies" render={(props) => <ProjectDetails {...props} open={true} project={projectDevies} leftAnimation={Direction.Left} rightAnimation={Direction.Right} />}/>
               <Route exact path="/stena" render={(props) => <ProjectDetails {...props} open={true} project={projectStena} leftAnimation={Direction.Down} rightAnimation={Direction.Right} />}/>

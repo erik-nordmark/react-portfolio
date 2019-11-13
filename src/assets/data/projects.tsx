@@ -23,17 +23,17 @@ export interface IProject {
     tags: string[]
 }
 
-export const projectVolvo2: IProject = {
+export const projectVolvoIt: IProject = {
     name: 'Volvo Trucks',
     image: volvoDetails,
-    text: 'At Volvo Trucks, they are building the next generation of trucks. I was part of the Android development team. They are working to build the new infotainment system that is planned to be released to the public in the near future. The software foundation is mainly Android, but is tightly connected with the truck-specific hardware and also requires knowledge working with network configuration. I did primarily work with an application that handles streams from auxiliary cameras on the network. Moreover, I was working with defining how to work with dependency injection together with Dagger.',
-    type: 'Architect',
+    text: 'Right now I am on a project for Volvo aftermarket.',
+    type: 'Front-end Architect',
     year: 2019,
     start: 'Q3 2019',
     end: '',
     link: '',
     location: 'Gothenburg, SWEDEN',
-    resume: true,
+    resume: false,
     tags: [
         'javascript',
     ]
@@ -245,7 +245,7 @@ export const projectErikNordmark: IProject = {
 };
 
 export const projects: IProject[] = [
-    //projectVolvo2,
+    projectVolvoIt,
     projectSwegon,
     projectDevies,
     projectStena,

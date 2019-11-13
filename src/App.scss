@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700');
-
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700&display=swap');
 * {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -13,11 +13,21 @@ body {
 
 }
 
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Montserrat', sans-serif;
+}
+
 h5 {
     font-size: 20px;
     font-style: italic;
     font-weight: 100;
     text-transform: uppercase;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 a:link {

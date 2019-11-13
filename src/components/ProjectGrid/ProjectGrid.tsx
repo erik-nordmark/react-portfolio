@@ -31,7 +31,7 @@ export class ProjectGrid extends React.Component<{}, {}> {
                 {/* <h2>Projects</h2> */}
                 <SectionHeader text="Projects" />
                 <div className="projects-grid">
-                    {/* <Link to="/volvo2"><Project image={volvo} /></Link> */}
+                    <Link to="/volvo-it"><Project image={volvo} /></Link>
                     <Link to="/swegon"><Project image={swegon} /></Link>
                     <Link to="/devies"><Project image={devies} /></Link>
                     <Link to="/stena"><Project image={stena} /></Link>

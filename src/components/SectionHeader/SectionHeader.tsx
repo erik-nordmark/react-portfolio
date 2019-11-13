@@ -35,7 +35,7 @@ export class SectionHeader extends React.Component<SectionHeaderProps, SectionHe
     
     _calcScroll(header:any) {
         var windowHeight = window.innerHeight;
-        var treshhold = 50;
+        var treshhold = 15;
 
         if (this.instance) {
             var offset = this.instance.getBoundingClientRect().top
