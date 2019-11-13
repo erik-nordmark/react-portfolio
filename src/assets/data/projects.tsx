@@ -24,7 +24,7 @@ export interface IProject {
 }
 
 export const projectVolvoIt: IProject = {
-    name: 'Volvo Trucks',
+    name: 'Volvo Group IT',
     image: volvoDetails,
     text: 'Right now I am on a project for Volvo aftermarket.',
     type: 'Front-end Architect',
