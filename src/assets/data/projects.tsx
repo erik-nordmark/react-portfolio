@@ -26,16 +26,18 @@ export interface IProject {
 export const projectVolvoIt: IProject = {
     name: 'Volvo Group IT',
     image: volvoDetails,
-    text: 'Right now I am on a project for Volvo aftermarket.',
+    text: 'I am in a project for Volvo IT to help them decide the overall software architecture for a new project aiming for the aftermarket. My role is more focusing on front-end architecture. One of the biggest obstacles in this project is the many integrations with old and somewhat outdated systems.',
     type: 'Front-end Architect',
     year: 2019,
     start: 'Q3 2019',
     end: '',
     link: '',
     location: 'Gothenburg, SWEDEN',
-    resume: false,
+    resume: true,
     tags: [
         'javascript',
+        'microfrotends',
+        'microservices'
     ]
 };
 

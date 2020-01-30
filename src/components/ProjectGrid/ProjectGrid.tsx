@@ -4,16 +4,16 @@ import { Project } from "../Project/Project";
 import { BrowserRouter as Route, Link } from 'react-router-dom';
 import { SectionHeader } from "../SectionHeader/SectionHeader";
 
-const swegon = require("../../assets/images/swegon.png");
-const devies = require("../../assets/images/devies.png");
-const stena = require("../../assets/images/stena.png");
-const volvo = require("../../assets/images/volvo.png");
-const virtualShelf = require("../../assets/images/virtual-shelf.png");
-const milestone = require("../../assets/images/milestone.png");
-const mouseophonic = require("../../assets/images/mouseophonic.png");
-const omnipar = require("../../assets/images/omnipar.png");
-const claimscheck = require("../../assets/images/claimscheck.png");
-const eriknordmark = require("../../assets/images/eriknordmark.png");
+const swegon = require("../../assets/images/projects/swegon.jpg");
+const devies = require("../../assets/images/projects/devies.jpg");
+const stena = require("../../assets/images/projects/stena.jpg");
+const volvo = require("../../assets/images/projects/volvo.jpg");
+const virtualShelf = require("../../assets/images/projects/virtual-shelf.jpg");
+const milestone = require("../../assets/images/projects/milestone.jpg");
+const mouseophonic = require("../../assets/images/projects/mouseophonic.jpg");
+const omnipar = require("../../assets/images/projects/omnipar.jpg");
+const claimscheck = require("../../assets/images/projects/claimscheck.jpg");
+const eriknordmark = require("../../assets/images/projects/eriknordmark.jpg");
 
 interface ProjectGridProps {
 }
