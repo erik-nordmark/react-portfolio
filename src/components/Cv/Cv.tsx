@@ -9,7 +9,7 @@ import { Assignment } from "../Assignment/Assignment"
 import { Resume } from "../Resume/Resume";
 import { projects } from '../../assets/data/projects';
 
-export class Cv extends Resume {
+export class Cv extends React.Component {
 
     constructor(props: any) {
         super(props);

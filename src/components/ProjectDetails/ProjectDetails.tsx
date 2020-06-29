@@ -3,8 +3,8 @@ import * as React from "react";
 import { Helmet } from "react-helmet";
 import './ProjectDetails.scss';
 import ReactGA from 'react-ga';
-import { Router, Route, Link } from 'react-router-dom';
-import { IProject } from '../../assets/data/projects';
+import { Link } from 'react-router-dom';
+import { IProject } from '../../interfaces/iProject';
 
 export enum Direction {
     Up = 'fade-up',
@@ -32,6 +32,9 @@ interface ProjectDetailsState {
 
 export class ProjectDetails extends React.Component<ProjectDetailsProps, ProjectDetailsState> {
     targetElement: any = null;
+    static contextTypes = {
+        router: () => true
+    }
 
     componentDidMount() {
         ReactGA.pageview('/' + this.props.project.name);
@@ -105,22 +108,22 @@ export class ProjectDetails extends React.Component<ProjectDetailsProps, Project
                     <meta name="keywords" content={this.props.project.name + "," + this.props.project.tags.map(tag => tag).join(",")} />
                     <title>Erik Nordmark - {this.props.project.name}</title>
                 </Helmet>
-                <Link to="/" className="close-project-details" style={{ opacity: this.props.open ? 1 : 0.5 }}><Ionicons.IoIosClose /></Link>             
+                <Link to="" onClick={this.context.router.history.goBack} className="close-project-details" style={{ opacity: this.props.open ? 1 : 0.5 }}><Ionicons.IoIosClose /></Link>             
                 <div className="left-side">
-                    <img src={String(this.props.project.image)} className={this.props.open ? this.props.leftAnimation : ''} alt={String(this.props.project.name)}></img>
+                    <img src={String(this.props.project.images[0].fields.file.url)} className={this.props.open ? this.props.leftAnimation : ''} alt={String(this.props.project.name)}></img>
                 </div>
                 <div className="right-side">
                     <div className={"text-wrapper " + (this.props.open ? this.props.rightAnimation : '')}>
                         <h2>{this.props.project.name}</h2>
                         <div className="specs">
-                            <h3 className="year">{this.props.project.year}</h3>
+                            <h3 className="year">{this.props.project.year.getFullYear()}</h3>
                             <h3 className="type">{this.props.project.type}</h3>
                         </div>
                         <p>{this.props.project.text}</p>
                         <ul className="tags-list">
                             {this.listTags()}
                         </ul>
-                        {this.props.project.link.length > 0 &&
+                        {this.props.project.link &&
                         <div className="visit">
                             <div className="divider"></div>
                             <a target="_blank" href={this.props.project.link}><button>VISIT</button></a>

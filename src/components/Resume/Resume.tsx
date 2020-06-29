@@ -2,39 +2,42 @@ import * as React from "react";
 import './Resume.scss';
 
 import { Assignment } from "../Assignment/Assignment"
-import { projects } from '../../assets/data/projects';
 import { Button } from "../Button/Button";
 import { SectionHeader } from "../SectionHeader/SectionHeader";
+import { ProjectContext } from '../../context/project-context';
 
-export interface ResumeProps {
+
+interface ResumeState {
+    projects: any[];
 }
 
-export class Resume extends React.Component<ResumeProps, {}> {
-    render() {
+export function Resume() {
 
-        const projectsToShow = projects.filter(project => project.resume);
+    const { projects } = React.useContext(ProjectContext);
 
-        return (
-            <section className="resume">
-                {/* <h2>Resumé</h2> */}
+    return (
+        <section className="resume">
+            {/* <h2>Resumé</h2> */}
 
-                <SectionHeader text="Resumé" />
+            <SectionHeader text="Resumé" />
 
-                { projectsToShow.map(project => {
-                    return <Assignment
-                    company={project.name}
-                    start={project.start}
-                    end={project.end}
-                    position={project.type}
-                    location={project.location}
-                    text={project.text}
-                    />
-                })
-                }
+            { projects!
+            .filter(project => project.resume)
+            .map(project => {
+                return <Assignment
+                company={project.name}
+                start={project.start}
+                end={project.end}
+                position={project.type}
+                location={project.location}
+                text={project.text}
+                employmentType={project.employmentType}
+                />
+            })
+            }
 
-                <Button width="400px" height="60px" text="Full Resumé" url="/cv" />
+            <Button width="400px" height="60px" text="Full Resumé" url="/cv" />
 
-            </section>
-        );
-    }
+        </section>
+    );
 }

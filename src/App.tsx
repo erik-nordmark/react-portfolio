@@ -7,33 +7,54 @@ import { ProjectDetails, Direction } from './components/ProjectDetails/ProjectDe
 import { Home } from './components/Home/Home';
 import { projectDevies, projectStena, projectVolvo, projectOmnipar, projectClaimscheck, projectSkimNyc, projectMilestone, projectMouseophonic, projectErikNordmark, projectSwegon, projectVolvoIt } from './assets/data/projects';
 import { Cv } from './components/Cv/Cv';
+import { ProjectContext } from './context/project-context';
+import { createClient } from 'contentful';
+import { getUrl } from './lib/url';
+import { IProject } from './interfaces/iProject';
 
-export class App extends Component {
+export class App extends Component<{}, {projects: any[]}> {
 
   constructor(props: any) {
     super(props);
     ReactGA.initialize('UA-12114335-2');
-   }
+
+    this.state = {
+      projects: []
+    };
+  }
+
+  componentWillMount() {
+    const client = createClient({
+        space: process.env.REACT_APP_SPACE_ID ? process.env.REACT_APP_SPACE_ID : "",
+        accessToken: process.env.REACT_APP_ACCESS_TOKEN ? process.env.REACT_APP_ACCESS_TOKEN : ""
+    });
+
+    client.getEntries()
+    .then( entries => {
+        const fields = entries.items.map(entries => entries.fields as IProject);
+        fields.map(field => field.year = new Date(field.year.toString()));
+        return this.setState({projects: fields})
+    });
+  }
+
+  setProjects(projects:any) {
+    this.setState({projects})
+  }
 
   render() {
     return (
       <Router>
         <div className="App">
-          <Switch>
-              <Route exact path="/" component={Home} />}/>
-              <Route exact path="/volvo-it" render={(props) => <ProjectDetails {...props} open={true} project={projectVolvoIt} leftAnimation={Direction.Left} rightAnimation={Direction.Up} />}/>
-              <Route exact path="/swegon" render={(props) => <ProjectDetails {...props} open={true} project={projectSwegon} leftAnimation={Direction.Down} rightAnimation={Direction.Up} />}/>
-              <Route exact path="/devies" render={(props) => <ProjectDetails {...props} open={true} project={projectDevies} leftAnimation={Direction.Left} rightAnimation={Direction.Right} />}/>
-              <Route exact path="/stena" render={(props) => <ProjectDetails {...props} open={true} project={projectStena} leftAnimation={Direction.Down} rightAnimation={Direction.Right} />}/>
-              <Route exact path="/volvo" render={(props) => <ProjectDetails {...props} open={true} project={projectVolvo} leftAnimation={Direction.Left} rightAnimation={Direction.Up} />}/>
-              <Route exact path="/omnipar" render={(props) => <ProjectDetails {...props} open={true} project={projectOmnipar} leftAnimation={Direction.Down} rightAnimation={Direction.Up} />}/>
-              <Route exact path="/claims-check" render={(props) => <ProjectDetails {...props} open={true} project={projectClaimscheck} leftAnimation={Direction.Left} rightAnimation={Direction.Right} />}/>
-              <Route exact path="/virtual-shelf" render={(props) => <ProjectDetails {...props} open={true} project={projectSkimNyc} leftAnimation={Direction.Left} rightAnimation={Direction.Up} />}/>
-              <Route exact path="/milestone" render={(props) => <ProjectDetails {...props} open={true} project={projectMilestone} leftAnimation={Direction.Down} rightAnimation={Direction.Right} />}/>
-              <Route exact path="/mouseophonic" render={(props) => <ProjectDetails {...props} open={true} project={projectMouseophonic} leftAnimation={Direction.Down} rightAnimation={Direction.Up} />}/>
-              <Route exact path="/eriknordmark" render={(props) => <ProjectDetails {...props} open={true} project={projectErikNordmark} leftAnimation={Direction.Left} rightAnimation={Direction.Right} />}/>
-              <Route exact path="/cv" render={(props) => <Cv {...props} />}/>
-          </Switch>
+          <ProjectContext.Provider value={{projects: this.state.projects, setProjects: this.setProjects}}>
+            <Switch>
+                <Route exact path="/" component={Home} />}/>
+                { this.state.projects!.map(project => {
+                      return <Route exact path={"/" + getUrl(project.name)} render={(props) => <ProjectDetails {...props} open={true} project={project} leftAnimation={Direction.Left} rightAnimation={Direction.Up} />}/>
+                  })
+                }
+                <Route exact path="/cv" render={(props) => <Cv {...props} />}/>
+            </Switch>
+          </ProjectContext.Provider>
         </div>
       </Router>
     );
